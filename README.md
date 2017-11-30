@@ -6,3 +6,5 @@ Repository for the Echo Community Project
 - David Hilscher
 - Mark Flores
 - Shaahid Khalpey
+
+© November 30, 2017
