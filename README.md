@@ -3,8 +3,12 @@ Repository for the Echo Community Project
 
 # Members
 - Cora Wong
-- David Hilscher
+- David Hilscher (The handsome one)
 - Mark Flores
 - Shaahid Khalpey
+
+# Technology
+- React-Native
+- Git
 
 © November 30, 2017
