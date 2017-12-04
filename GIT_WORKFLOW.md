@@ -41,7 +41,7 @@ To update your pull request with changes, simply continue making commits in your
 1. ```git checkout develop```
 2. ```git pull --rebase origin develop```
 
-*If there are conflicts with master use the following command*
+*If there are conflicts with develop use the following command*
 - ```git checkout . && git reset --hard origin/develop```
 
 3. ```git checkout feature-my-new-feature```
