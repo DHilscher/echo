@@ -39,9 +39,15 @@
 		2FD0245EDFDF48F3B425AC4F /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 366CA7A1A3D24D549019A33B /* libRealmReact.a */; };
 		89D3587FC5E44679BA275DEF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DE128C53F48E7A1B16970 /* libc++.tbd */; };
 		6476AF84284A417B8A48A873 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A3BDC7F9F04DCC84661AE0 /* libz.tbd */; };
+<<<<<<< HEAD
 		0553EBA21C8E41F491EA76FA /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4F6605CDDC47C3BE03723D /* Lato-Black.ttf */; };
 		BC3AB56C5FE046C39817DE0E /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE90900D04C4463B90F221C /* Lato-Heavy.ttf */; };
 		E43EB5477F954D899000DC97 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F31A75A364FF42B4A1BF1924 /* Lato-Medium.ttf */; };
+=======
+		CED2E75F2C3C41B9A017D581 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5ED52A7DDC242C09D13D23A /* Lato-Black.ttf */; };
+		C4877F5C938742268145216D /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9B7BDE6B4454C318BBBD6B5 /* Lato-Heavy.ttf */; };
+		7A627FBC9A7D40AD97251235 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A93DC6678F441F1B36C50F5 /* Lato-Medium.ttf */; };
+>>>>>>> 01e3158343872d6e26189cbadce3bc80f7f69bff
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,9 +279,15 @@
 		366CA7A1A3D24D549019A33B /* libRealmReact.a */ = {isa = PBXFileReference; name = "libRealmReact.a"; path = "libRealmReact.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		526DE128C53F48E7A1B16970 /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 		C1A3BDC7F9F04DCC84661AE0 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+<<<<<<< HEAD
 		4E4F6605CDDC47C3BE03723D /* Lato-Black.ttf */ = {isa = PBXFileReference; name = "Lato-Black.ttf"; path = "../js/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2FE90900D04C4463B90F221C /* Lato-Heavy.ttf */ = {isa = PBXFileReference; name = "Lato-Heavy.ttf"; path = "../js/assets/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F31A75A364FF42B4A1BF1924 /* Lato-Medium.ttf */ = {isa = PBXFileReference; name = "Lato-Medium.ttf"; path = "../js/assets/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+=======
+		A5ED52A7DDC242C09D13D23A /* Lato-Black.ttf */ = {isa = PBXFileReference; name = "Lato-Black.ttf"; path = "../js/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D9B7BDE6B4454C318BBBD6B5 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; name = "Lato-Heavy.ttf"; path = "../js/assets/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A93DC6678F441F1B36C50F5 /* Lato-Medium.ttf */ = {isa = PBXFileReference; name = "Lato-Medium.ttf"; path = "../js/assets/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+>>>>>>> 01e3158343872d6e26189cbadce3bc80f7f69bff
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,9 +548,15 @@
 		C13594154C1C4E47A475F5FF /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
+<<<<<<< HEAD
 				4E4F6605CDDC47C3BE03723D /* Lato-Black.ttf */,
 				2FE90900D04C4463B90F221C /* Lato-Heavy.ttf */,
 				F31A75A364FF42B4A1BF1924 /* Lato-Medium.ttf */,
+=======
+				A5ED52A7DDC242C09D13D23A /* Lato-Black.ttf */,
+				D9B7BDE6B4454C318BBBD6B5 /* Lato-Heavy.ttf */,
+				2A93DC6678F441F1B36C50F5 /* Lato-Medium.ttf */,
+>>>>>>> 01e3158343872d6e26189cbadce3bc80f7f69bff
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -913,9 +931,15 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+<<<<<<< HEAD
 				0553EBA21C8E41F491EA76FA /* Lato-Black.ttf in Resources */,
 				BC3AB56C5FE046C39817DE0E /* Lato-Heavy.ttf in Resources */,
 				E43EB5477F954D899000DC97 /* Lato-Medium.ttf in Resources */,
+=======
+				CED2E75F2C3C41B9A017D581 /* Lato-Black.ttf in Resources */,
+				C4877F5C938742268145216D /* Lato-Heavy.ttf in Resources */,
+				7A627FBC9A7D40AD97251235 /* Lato-Medium.ttf in Resources */,
+>>>>>>> 01e3158343872d6e26189cbadce3bc80f7f69bff
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

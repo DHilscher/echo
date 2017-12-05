@@ -1,26 +1,30 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
 
-export default class App extends Component<{}> {
+import {
+  NavigationContext,
+  NavigationProvider,
+  StackNavigation
+} from "@expo/ex-navigation";
+import Router from "./navigation/routes";
+import Store from "./redux/store";
+import { Provider } from "react-redux";
+
+const navigationContext = new NavigationContext({
+  router: Router,
+  store: Store
+});
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-      </View>
+      <Provider store={Store}>
+        <NavigationProvider context={navigationContext} router={Router}>
+          <StackNavigation
+            navigatorUID="root"
+            id="root"
+            initialRoute={Router.getRoute("login")}
+          />
+        </NavigationProvider>
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  }
-});
