@@ -5,21 +5,30 @@ import styles from './styles'
 import PropTypes from 'prop-types'
 
 const Setting = ({}) => {
-  <ScrollView>
-    <View> <Text>Logo would be here</Text> </View>
-    <View> <Text>Settings</Text> </View>
-    <View>
-      <Text>User Information</Text>
-      <Text>username</Text> <Button> Change </Button>
-      <Text>email</Text> <Button> Change </Button>
-      <Text>password</Text> <Button> Change </Button>
-    </View>
-    <View>
-      <Text>Notification</Text>
-      <Text>new results</Text> <Switch> Change </Switch>
-      <Text>reminder</Text> <Switch> Change </Switch>
-    </View>
-  </ScrollView>
+  return (
+    <ScrollView>
+      <View>
+        <Text>Logo would be here</Text>
+      </View>
+
+      <View>
+        <Text>Settings</Text>
+      </View>
+
+      <View>
+        <Text>User Information</Text>
+        <Text>username</Text>
+        <Text>email</Text>
+        <Text>password</Text>
+      </View>
+      
+      <View>
+        <Text>Notification</Text>
+        <Text>new results</Text>
+        <Text>reminder</Text>
+      </View>
+    </ScrollView>
+  )
 }
 
 export default Setting
