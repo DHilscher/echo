@@ -6,28 +6,28 @@ import PropTypes from 'prop-types'
 
 const Setting = ({}) => {
   return (
-    <View style={{ width: '100%'}}>
-      <View style={{ backgroundColor: 'orange', height: 100, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: 'white', fontSize: 16 }}>Logo would be here</Text>
+    <View style={styles.settingContainer}>
+      <View style={styles.logoContainer}>
+        <Text>Logo would be here</Text>
       </View>
 
-      <View style={{ backgroundColor: 'purple', height: 70, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Settings</Text>
+      <View style={styles.titleDivider}>
+        <Text style={styles.titleDividerText}>Settings</Text>
       </View>
 
-      <View style={{ backgroundColor: 'green', height: 280, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>User Information</Text>
-        <View style={{ backgroundColor: 'pink', width: '100%', height: 200, justifyContent: 'space-between', padding: 30 }}>
-          <View style={{ justifyContent: 'flex-start', position: 'relative', backgroundColor: 'red' }}><Text style={{ color: 'white', fontSize: 16 }}>username</Text><TouchableOpacity activeOpacity={0.9} style={{ backgroundColor: 'orange', width: 100, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', position: 'absolute', right: 0, top: -10 }}><Text>Change</Text></TouchableOpacity></View>
-          <View style={{ justifyContent: 'flex-start', position: 'relative', backgroundColor: 'red' }}><Text style={{ color: 'white', fontSize: 16 }}>email</Text><TouchableOpacity activeOpacity={0.9} style={{ backgroundColor: 'orange', width: 100, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', position: 'absolute', right: 0, top: -10 }}><Text>Change</Text></TouchableOpacity></View>
-          <View style={{ justifyContent: 'flex-start', position: 'relative', backgroundColor: 'red' }}><Text style={{ color: 'white', fontSize: 16 }}>password</Text><TouchableOpacity activeOpacity={0.9} style={{ backgroundColor: 'orange', width: 100, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', position: 'absolute', right: 0, top: -10 }}><Text>Change</Text></TouchableOpacity></View>
+      <View style={styles.userInformationSection}>
+        <Text style={styles.userInformationTitle}>User Information</Text>
+        <View style={styles.userInformationOptionsContainer}>
+          <View style={styles.singleUserOptionContainer}><Text style={styles.userOptionText}>username</Text><TouchableOpacity activeOpacity={0.9}><Text>Change</Text></TouchableOpacity></View>
+          <View style={styles.singleUserOptionContainer}><Text style={styles.userOptionText}>email</Text><TouchableOpacity activeOpacity={0.9}><Text>Change</Text></TouchableOpacity></View>
+          <View style={styles.singleUserOptionContainer}><Text style={styles.userOptionText}>password</Text><TouchableOpacity activeOpacity={0.9}><Text>Change</Text></TouchableOpacity></View>
         </View>
       </View>
 
-      <View style={{ backgroundColor: 'blue', height: 235, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>Notification</Text>
-        <Text style={{ color: 'white', fontSize: 16 }}>new results</Text><Switch/>
-        <Text style={{ color: 'white', fontSize: 16 }}>reminder</Text><Switch/>
+      <View style={styles.notificationSection}>
+        <Text style={styles.notificationTitle}>Notification</Text>
+        <Text>new results</Text><Switch/>
+        <Text>reminder</Text><Switch/>
       </View>
     </View>
   )
