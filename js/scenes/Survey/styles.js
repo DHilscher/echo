@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
   feedbackContainer:{
     height: '100%',
-    backgroundColor: 'magenta'
+    backgroundColor: 'violet'
   },
 
   logoContainer:{
@@ -44,5 +44,12 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'blue'
+  },
+
+  feedbackOptions3:{
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'indigo'
   },
 })

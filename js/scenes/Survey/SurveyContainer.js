@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 
-import FeedBack from './Feedback'
+import Survey from './Survey'
 
-class FeedbackContainer extends Component {
+class SurveyContainer extends Component {
   render() {
     return (
       <View>
-        <FeedBack />
+        <Survey />
       </View>
     );
   }
 }
 
-export default FeedbackContainer;
+export default SurveyContainer;
