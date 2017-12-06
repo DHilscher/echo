@@ -7,9 +7,3 @@ export const goToHome = currentNavigatorUID => {
     NavigationActions.push(currentNavigatorUID, Router.getRoute("register"))
   );
 };
-
-// export const goToHome = goToHome => {
-//   Store.dispatch(
-//     NavigationActions.push("root", Router.getRoute("register", { goToHome }))
-//   );
-// };

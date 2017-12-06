@@ -14,10 +14,10 @@ const Login = ({ currentNavigatorUID }) => {
       <View style={styles.echoContainer}>
         <Text style={styles.title}>echo</Text>
       </View>
-      <View style={{ padding: 10 }}>
+      <View>
         <TextInput style={styles.usernameInput} placeholder="username" />
       </View>
-      <View style={{ padding: 10 }}>
+      <View>
         <TextInput style={styles.passwordInput} placeholder="password" />
       </View>
       <TouchableOpacity
