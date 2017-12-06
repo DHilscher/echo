@@ -45,4 +45,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'blue'
   },
+
+  feedbackOptions3:{
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'indigo'
+  },
 })
