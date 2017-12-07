@@ -1,14 +1,29 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
+import Login from "./Login";
+import { connect } from "react-redux";
 
 class LoginContainer extends Component {
+  static route = {
+    navigationBar: {
+      title: "Login"
+    }
+  };
   render() {
+    const { currentNavigatorUID } = this.props;
+    console.log(currentNavigatorUID);
+
     return (
       <View>
-        <Text>This is the login scene</Text>
+        <Login currentNavigatorUID={currentNavigatorUID} />
       </View>
     );
   }
 }
 
-export default LoginContainer;
+const mapStateToProps = state => {
+  return {
+    currentNavigatorUID: state.navigation.currentNavigatorUID
+  };
+};
+export default connect(mapStateToProps)(LoginContainer);
