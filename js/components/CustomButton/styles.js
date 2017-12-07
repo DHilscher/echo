@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import { colors, typography, textSizes, margins } from '../../config/styles';
 
 const styles = StyleSheet.create({
+  // Below are the styles for a single button
   buttonWrapper: {
     alignItems: 'center',
   },
@@ -16,10 +17,33 @@ const styles = StyleSheet.create({
     fontSize: textSizes.bodyL,
     color: 'white',
     textAlign: 'center',
-    marginTop: margins.marginS,
-    marginBottom: margins.marginS,
-    marginLeft: margins.marginL,
-    marginRight: margins.marginL,
+    marginVertical: margins.marginS,
+    marginHorizontal: margins.marginL + margins.marginL,
+  },
+  // Below are the styles for full width button
+  fullWidthButtonWrapper: {
+    height: 90,
+    backgroundColor: colors.backgroundLightGreen,
+    justifyContent: 'center',
+  },
+  fullWidthButtonText: {
+    fontFamily: typography.fontBlack,
+    fontSize: textSizes.title3,
+    color: 'white',
+    textAlign: 'center',
+  },
+  // Below are the styles for square button
+  squareWrapper: {
+    width: 90,
+    height: 90,
+    backgroundColor: colors.yellow,
+    justifyContent: 'center',
+  },
+  squareButtonText: {
+    fontFamily: typography.fontHeavy,
+    fontSize: textSizes.body,
+    color: 'white',
+    textAlign: 'center',
   }
 });
 
