@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  containerP1: {
+  container: {
     alignItems: "center",
     paddingHorizontal: 20,
     backgroundColor: "#3C898E",
@@ -24,20 +24,5 @@ export default StyleSheet.create({
   },
   descriptionInput: {
     width: "100%"
-  },
-  dayInput: {
-    borderColor: "white",
-    borderWidth: 1,
-    width: 50
-  },
-  monthInput: {
-    borderColor: "white",
-    borderWidth: 1,
-    width: 50
-  },
-  yearInput: {
-    borderColor: "white",
-    borderWidth: 1,
-    width: 50
   }
 });
