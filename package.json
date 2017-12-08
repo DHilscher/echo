@@ -12,6 +12,7 @@
     "prop-types": "^15.6.0",
     "react": "16.0.0",
     "react-native": "0.50.4",
+    "react-native-step-indicator": "0.0.7",
     "react-native-vector-icons": "^4.4.2",
     "react-redux": "^5.0.6",
     "realm": "^2.0.12",
