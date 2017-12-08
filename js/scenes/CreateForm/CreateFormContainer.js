@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 
-import FeedBack from './Feedback'
+import CreateForm from './CreateForm'
 
-class FeedbackContainer extends Component {
+class CreateFormContainer extends Component {
   render() {
     return (
       <View>
-        <FeedBack />
+        <CreateForm />
       </View>
     );
   }
 }
 
-export default FeedbackContainer;
+export default CreateFormContainer;

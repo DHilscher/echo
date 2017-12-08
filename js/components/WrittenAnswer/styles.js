@@ -45,4 +45,22 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'blue'
   },
+
+  feedbackOptions3:{
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'indigo'
+  },
+
+  textInputStyle:{
+    backgroundColor: 'red',
+    padding: 10,
+    width: '80%'
+  },
+
+  MCAnswerView:{
+    flexDirection: 'row',
+    marginBottom: 10
+  }
 })
