@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import * as firebase from 'firebase';
+import config from './config/firebase';
 import {
   NavigationContext,
   NavigationProvider,
@@ -13,7 +14,12 @@ const navigationContext = new NavigationContext({
   router: Router,
   store: Store
 });
+
 export default class App extends Component {
+  componentWillMount() {
+    firebase.initializeApp(config);
+  }
+
   render() {
     return (
       <Provider store={Store}>
