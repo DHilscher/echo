@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
 
-import CustomButton from "../../components/CustomButton";
+import { CustomButton } from "../../components/CustomButton";
 import { goToHome } from "../../lib/navigationHelpers";
 
 import styles from "./styles";
