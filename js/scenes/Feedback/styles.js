@@ -1,48 +1,45 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
+
+import { colors, typography, textSizes, margins } from '../../config/styles';
 
 export default StyleSheet.create({
-  feedbackContainer:{
-    height: '100%',
-    backgroundColor: 'magenta'
+  headerNavBar: {
+    width: '100%',
+    height: 90,
   },
-
-  logoContainer:{
-    height: 100,
-    alignItems: 'center',
+  pageTitleWrapper: {
+    backgroundColor: colors.darkGreen,
+    minHeight: 60,
     justifyContent: 'center',
-    backgroundColor: 'red'
+    padding: margins.marginS,
   },
-
-  feedbacktitle:{
-    height: 60,
-    alignItems: 'center',
+  pageTitle: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: textSizes.title2,
+    fontFamily: typography.fontHeavy,
+  },
+  questionWrapper: {
+    minHeight: 88,
+    backgroundColor: colors.mainGreen,
     justifyContent: 'center',
-    backgroundColor: 'orange'
+    padding: margins.marginL,
   },
-
-  feedbackQuestion:{
-    height: 100,
-    alignItems: 'center',
+  questionText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: textSizes.bodyL,
+    fontFamily: typography.fontHeavy,
+  },
+  optionWrapper: {
+    minHeight: 88,
+    backgroundColor: colors.backgroundLightGreen,
     justifyContent: 'center',
-    backgroundColor: 'yellow'
   },
-
-  feedbackOptions:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'green'
-  },
-
-  feedbackOptionDivider:{
-    height: 2,
-    backgroundColor: 'white'
-  },
-
-  feedbackOptions2:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue'
+  optionText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: textSizes.title3,
+    fontFamily: typography.fontHeavy,
   },
 })

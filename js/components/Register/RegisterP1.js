@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, Image } from 'react-native';
-import CustomButton from '../../components/CustomButton'
+import CustomButton from "../Buttons/CustomButton";
 
 import { styles } from './styles';
 

@@ -6,16 +6,20 @@ const styles = StyleSheet.create({
   homeWrapper: {
     flex: 1,
   },
-  HeaderWrapper: {
-    flex: 3,
+  headerWrapper: {
+    flex: 2.5,
     backgroundColor: colors.backgroundLightGreen,
-    alignItems: 'center',
+  },
+  headerTextWrapper: {
+    flex: 1,
+    backgroundColor: colors.backgroundLightGreen,
+    justifyContent: "center",
   },
   headerText: {
     color: "white",
     fontFamily: typography.fontHeavy,
     fontSize: textSizes.title3,
-    marginTop: margins.marginM,
+    textAlign: "center",
   },
   feedbackWrapper: {
     flex: 1,
@@ -40,7 +44,7 @@ const styles = StyleSheet.create({
   },
   navTextWrapper: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   navText: {
     color: "white",

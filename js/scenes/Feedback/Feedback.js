@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity} from 'react-native'
+import { Text, View, TouchableOpacity, Image } from 'react-native';
+import PropTypes from 'prop-types';
 
-import styles from './styles'
-import PropTypes from 'prop-types'
+import styles from './styles';
+import Separator from '../../components/Separator';
 
 const Feedback = ({}) => {
   return (
-    <View style={styles.feedbackContainer}>
-      <View style={styles.logoContainer}><Text>ECHO</Text></View>
-      <View style={styles.feedbacktitle}><Text>Feedback</Text></View>
-      <View style={styles.feedbackQuestion}><Text>What type of feedback are you looking for?</Text></View>
-      <TouchableOpacity activeOpacity={0.7}><View style={styles.feedbackOptions}><Text>Project based feedback</Text></View></TouchableOpacity>
-      <View style={styles.feedbackOptionDivider}></View>
-      <TouchableOpacity activeOpacity={0.7}><View style={styles.feedbackOptions2}><Text>General feedback</Text></View></TouchableOpacity>
+    <View>
+      <View>
+        <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
+      </View>
+      <View style={styles.pageTitleWrapper}>
+        <Text style={styles.pageTitle}>Feedback</Text>
+      </View>
+
+      <View style={styles.questionWrapper}>
+        <Text style={styles.questionText}>What type of feedback are you looking for?</Text>
+      </View>
+
+      <TouchableOpacity 
+        activeOpacity={0.7} 
+        style={styles.optionWrapper} 
+      >
+        <Text style={styles.optionText}>Project based feedback</Text>
+      </TouchableOpacity>
+      <Separator />
+      <TouchableOpacity 
+        activeOpacity={0.7} 
+        style={styles.optionWrapper}
+      >
+        <Text style={styles.optionText}>General feedback</Text>
+      </TouchableOpacity>
+
+      <View>
+        <Image style={styles.feedbackImage} source={require('../../assets/images/survey/ask.png')} resizeMode="contain"/>
+      </View>
+      
     </View>
   )
 }
