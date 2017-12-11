@@ -18,11 +18,11 @@ export default class App extends Component {
     return (
       <Provider store={Store}>
         <NavigationProvider context={navigationContext} router={Router}>
-          
+
           <StackNavigation
             navigatorUID="root"
             id="root"
-            initialRoute={Router.getRoute("settings")}
+            initialRoute={Router.getRoute("home")}
           />
         </NavigationProvider>
       </Provider>
