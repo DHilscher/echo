@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StepIndicator from 'react-native-step-indicator';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 
-import CustomButton from '../CustomButton'
+import CustomButton from "../Buttons/CustomButton";
 import { indicatorStyles, styles } from './styles';
 
 

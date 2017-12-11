@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-import CustomButton from "../../components/CustomButton";
+import CustomButton from "../../components/Buttons/CustomButton";
 import { goToHome } from "../../lib/navigationHelpers";
 
 import styles from "./styles";

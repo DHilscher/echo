@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+
+import Onboarding from './Onboarding';
 
 class OnboardingContainer extends Component {
   render() {
     return (
-      <View>
-        <Text>This is the onboarding scene</Text>
-      </View>
+      <Onboarding />
     );
   }
 }

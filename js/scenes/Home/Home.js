@@ -6,8 +6,11 @@ import styles from './styles';
 
 const Home = () => (
   <View style={styles.homeWrapper}>
-    <View style={styles.HeaderWrapper}>
-      <Image source={require('../../assets/images/home-nav-bar.png')} />
+    <View style={styles.headerWrapper}>
+      <Image source={require('../../assets/images/home-nav-bar.png')}/>
+    </View>
+
+    <View style={styles.headerTextWrapper}>
       <Text style={styles.headerText}>Hello, #name!</Text>
     </View>
     
