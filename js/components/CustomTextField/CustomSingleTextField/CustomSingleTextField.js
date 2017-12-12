@@ -12,7 +12,8 @@ const SingleTextField = ({ placeholder }) => (
       placeholderTextColor={colors.lightestGreen}
       selectionColor={colors.yellow}
       autoCapitalize = "none"
-      style={styles.textFieldText} />
+      style={styles.textFieldText} 
+      secureTextEntry={ placeholder === "password" ? true : false } />
   </View>
 );
 
