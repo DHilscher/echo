@@ -5,7 +5,7 @@ import { colors, typography, textSizes, margins } from '../../config/styles';
 export default StyleSheet.create({
   headerNavBar: {
     width: '100%',
-    height: 90,
+    minHeight: 90,
   },
   pageTitleWrapper: {
     backgroundColor: colors.darkGreen,
@@ -28,7 +28,7 @@ export default StyleSheet.create({
   questionText: {
     color: 'white',
     textAlign: 'center',
-    fontSize: textSizes.bodyL,
+    fontSize: textSizes.title3,
     fontFamily: typography.fontHeavy,
   },
   optionWrapper: {

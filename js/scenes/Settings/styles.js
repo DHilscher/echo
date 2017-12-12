@@ -1,85 +1,53 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
+
+import { colors, typography, textSizes, margins } from '../../config/styles';
 
 export default StyleSheet.create({
-  // Black background
   settingContainer:{
-    width: '100%'
+    flex: 1,
+    backgroundColor: colors.backgroundLightGreen,
   },
 
-  logoContainer:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'orange'
-  },
-
-  titleDivider:{
-    height: 70,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'purple'
-  },
-
-  titleDividerText:{
-    color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-
-  userInformationSection:{
-    height: 280,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'green'
-  },
-
-  userInformationTitle:{
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold'
-  },
-
-  userInformationOptionsContainer:{
-    height: 200,
+  headerNavBar: {
     width: '100%',
-    justifyContent: 'space-between',
-    padding: 30,
-    backgroundColor: 'pink'
+    minHeight: 90,
   },
-
-  singleUserOptionContainer:{
-    justifyContent: 'flex-start',
-    position: 'relative',
-    backgroundColor: 'red'
-  },
-
-  userOptionText:{
-    color: 'white',
-    fontSize: 16
-  },
-
-  notificationSection:{
-    height: 235, 
-    alignItems: 'center', 
+  pageTitleWrapper: {
+    backgroundColor: colors.darkGreen,
+    minHeight: 60,
     justifyContent: 'center',
-    backgroundColor: 'blue'
+    padding: margins.marginS,
   },
-
-  notificationTitle:{
+  pageTitle: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: textSizes.title2,
+    fontFamily: typography.fontBlack,
+  },
+  settingSection: {
+    padding: margins.marginL,
+  },
+  sectionTitle: {
     color: 'white', 
-    fontSize: 18, 
-    fontWeight: 'bold'
+    fontSize: textSizes.title3,
+    fontFamily: typography.fontHeavy,
+    textAlign: 'center',
+    marginBottom: margins.marginL,
   },
-
-  button:{
-    backgroundColor: 'orange', 
-    width: 100, 
-    height: 40, 
-    borderRadius: 20, 
-    justifyContent: 'center', 
-    alignItems: 'center', 
-    position: 'absolute', 
-    right: 0, 
-    top: -10
-  }
+  userInformationSection: {
+    backgroundColor: colors.mainGreen,
+  },
+  notificationSection: {
+    backgroundColor: colors.backgroundLightGreen,
+  },
+  optionContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: margins.marginS,
+  },
+  optionText: {
+    color: 'white',
+    fontSize: textSizes.bodyL,
+    fontFamily: typography.fontHeavy,
+  },
 })
