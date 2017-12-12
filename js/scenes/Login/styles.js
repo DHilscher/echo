@@ -1,26 +1,34 @@
 import { StyleSheet } from "react-native";
 
+import { colors, typography, textSizes, margins } from '../../config/styles';
+
 export default StyleSheet.create({
   container: {
     height: "100%",
-    paddingTop: "50%"
+    backgroundColor: colors.backgroundLightGreen,
+    paddingBottom: margins.marginL,
   },
-  echoContainer: {
-    justifyContent: "center"
+  loginHeaderWrapper: {
+    alignItems: "center",
   },
-  title: {
-    alignSelf: "center",
-    fontSize: 64
+  logoImage: {
+    marginTop: margins.marginL + margins.marginL,
+    marginBottom: margins.marginL,
   },
-  usernameInput: {
-    alignSelf: "center",
-    fontSize: 18
-  },
-  passwordInput: {
-    alignSelf: "center",
-    fontSize: 18
+  loginContentWrapper: {
+    paddingHorizontal: margins.marginL + margins.marginL,
   },
   logInButton: {
-    paddingTop: "10%"
-  }
+    marginTop: margins.marginL,
+  },
+  bottomWrapper: {
+    position: "absolute",
+    bottom: 0,
+    margin: margins.marginL,
+  },
+  textButton: {
+    fontSize: textSizes.bodyL,
+    fontFamily: typography.fontHeavy,
+    color: "white",
+  },
 });
