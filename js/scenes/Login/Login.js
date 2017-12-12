@@ -1,18 +1,21 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity, Image } from "react-native";
-
-import { goToRoute } from "../../lib/navigationHelpers";
-import styles from "./styles";
 import CustomButton from "../../components/Buttons/CustomButton";
 import CustomSingleTextField from "../../components/CustomTextField/CustomSingleTextField";
 
-const Login = ({ currentNavigatorUID }) => {
+import { goToRoute } from "../../lib/navigationHelpers";
 
+import styles from "./styles";
+
+const Login = ({ currentNavigatorUID }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginHeaderWrapper}>
-        <Image source={require('../../assets/images/login/login-items.png')}/>
-        <Image source={require('../../assets/images/echo-logo-white.png')} style={styles.logoImage}/>
+        <Image source={require("../../assets/images/login/login-items.png")} />
+        <Image
+          source={require("../../assets/images/echo-logo-white.png")}
+          style={styles.logoImage}
+        />
       </View>
 
       <View style={styles.loginContentWrapper}>
