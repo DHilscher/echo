@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import ProjectP1 from "./ProjectP1";
-import ProjectP2 from "./ProjectP2";
+import Project from "./Project";
 import { connect } from "react-redux";
-
-import { nextProjectPage } from "../../redux/modules/project";
 
 class ProjectContainer extends Component {
   static route = {
@@ -16,6 +13,14 @@ class ProjectContainer extends Component {
     this.props.projectPage;
   }
 
+  // componentWillUnmount() {
+  //   this.props.dispatch(resetProjectPage());
+  // }
+
+  // _resetPage = () => {
+  //   this.props.dispatch(nextProjectPage(1));
+  // };
+
   render() {
     const { currentNavigatorUID, projectPage } = this.props;
 
@@ -23,15 +28,7 @@ class ProjectContainer extends Component {
       this.props.dispatch(nextProjectPage(projectPage + 1));
     };
 
-    console.log(projectPage);
-    console.log(currentNavigatorUID);
-
-    if (projectPage === 1) {
-      return <ProjectP1 index={_nextPage} />;
-    }
-    if (projectPage === 2) {
-      return <ProjectP2 />;
-    }
+    return <Project />;
   }
 }
 

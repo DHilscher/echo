@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
 
 import CustomButton from "../../components/Buttons/CustomButton";
-import { goToHome } from "../../lib/navigationHelpers";
+import { goToRoute } from "../../lib/navigationHelpers";
 
 import styles from "./styles";
 
@@ -21,12 +21,15 @@ const Login = ({ currentNavigatorUID }) => {
         <TextInput style={styles.passwordInput} placeholder="password" />
       </View>
       <TouchableOpacity
-        onPress={() => goToHome(currentNavigatorUID)}
+        onPress={() => goToRoute("home")}
         style={styles.logInButton}
       >
         <CustomButton btnText="Log In" />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.logInButton}>
+      <TouchableOpacity
+        onPress={() => goToRoute("register")}
+        style={styles.logInButton}
+      >
         <Text>Register</Text>
       </TouchableOpacity>
     </View>
