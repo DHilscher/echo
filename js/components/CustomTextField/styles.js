@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 import { colors, typography, textSizes, margins } from '../../config/styles';
 
 const styles = StyleSheet.create({
-  // Below is the styles for single text field
   textFieldText: {
     fontFamily: typography.fontMedium,
     fontSize: textSizes.bodyL,
@@ -14,7 +13,7 @@ const styles = StyleSheet.create({
     borderColor: colors.lightestGreen,
     borderBottomWidth: 3,
   },
-  // Below are the styles for text area 
+  
   textAreaWrapper: {
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
     borderRadius: 15,
@@ -27,8 +26,6 @@ const styles = StyleSheet.create({
     color: colors.darkGreen,
     height: 100,
   },
-
-  // styles for signup form
   
   inputStyle: {
     paddingRight: 5,
