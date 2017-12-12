@@ -1,31 +1,33 @@
-import React from 'react';
-import {View, Text, TouchableOpacity, Image } from 'react-native';
+import React from "react";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import CustomButton from "../Buttons/CustomButton";
+import { goToRoute } from "../../lib/navigationHelpers";
 
-import { styles } from './styles';
+import { styles } from "./styles";
 
-const Register1 = ({index}) => {
-    return (
-        <View style={styles.container} > 
-            <Image style={styles.image}
-                source={require('../../assets/images/registration/registration-1.png')}
-            />
-            <View>
-                <Text style={styles.welcome}>Hello, welcome to echo!</Text>
-            </View>
-            <View>
-                <Text style={styles.journey}>Begin your journey.</Text>
-            </View>
-            <TouchableOpacity onPress={() => index()} >
-                <CustomButton btnText={'>'}/>
-            </TouchableOpacity>
-            <TouchableOpacity >
-                <View>
-                    <Text >Terms & Conditions</Text>
-                </View>
-            </TouchableOpacity>
+const Register1 = () => {
+  return (
+    <View style={styles.container}>
+      <Image
+        style={styles.image}
+        source={require("../../assets/images/registration/registration-1.png")}
+      />
+      <View>
+        <Text style={styles.welcome}>Hello, welcome to echo!</Text>
+      </View>
+      <View>
+        <Text style={styles.journey}>Begin your journey.</Text>
+      </View>
+      <TouchableOpacity onPress={() => goToRoute("register2")}>
+        <CustomButton btnText={">"} />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <View>
+          <Text>Terms & Conditions</Text>
         </View>
-    )
-}
+      </TouchableOpacity>
+    </View>
+  );
+};
 
-export default Register1
+export default Register1;

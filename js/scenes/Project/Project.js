@@ -10,12 +10,11 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 
 import CustomButton from "../../components/Buttons/CustomButton";
-import { goToHome } from "../../lib/navigationHelpers";
+import { goToRoute } from "../../lib/navigationHelpers";
 
 import styles from "./styles";
 
-const ProjectP1 = ({ currentNavigatorUID, index }) => {
-  console.log(index);
+const Project = () => {
   return (
     <View style={styles.containerP1}>
       <TextInput style={styles.projectNameInput} placeholder="" />
@@ -35,11 +34,14 @@ const ProjectP1 = ({ currentNavigatorUID, index }) => {
       <Text>M</Text>
       <TextInput style={styles.yearInput} placeholder="" />
       <Text>Y</Text>
-      <TouchableOpacity onPress={() => index()} style={styles.nextButton}>
+      <TouchableOpacity
+        onPress={() => goToRoute("projectAdded")}
+        style={styles.nextButton}
+      >
         <CustomButton btnText="Next" />
       </TouchableOpacity>
     </View>
   );
 };
 
-export default ProjectP1;
+export default Project;

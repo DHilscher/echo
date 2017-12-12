@@ -4,10 +4,8 @@ import Login from "./Login";
 import { connect } from "react-redux";
 
 class LoginContainer extends Component {
-
   render() {
     const { currentNavigatorUID } = this.props;
-    console.log(currentNavigatorUID);
 
     return (
       <View>

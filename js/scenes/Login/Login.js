@@ -1,18 +1,21 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity, Image } from "react-native";
-
-import styles from "./styles";
-import { goToHome } from "../../lib/navigationHelpers";
 import CustomButton from "../../components/Buttons/CustomButton";
 import CustomSingleTextField from "../../components/CustomTextField/CustomSingleTextField";
 
-const Login = ({ currentNavigatorUID }) => {
+import { goToRoute } from "../../lib/navigationHelpers";
 
+import styles from "./styles";
+
+const Login = ({ currentNavigatorUID }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginHeaderWrapper}>
-        <Image source={require('../../assets/images/login/login-items.png')}/>
-        <Image source={require('../../assets/images/echo-logo-white.png')} style={styles.logoImage}/>
+        <Image source={require("../../assets/images/login/login-items.png")} />
+        <Image
+          source={require("../../assets/images/echo-logo-white.png")}
+          style={styles.logoImage}
+        />
       </View>
 
       <View style={styles.loginContentWrapper}>
@@ -20,7 +23,7 @@ const Login = ({ currentNavigatorUID }) => {
         <CustomSingleTextField placeholder="password" />
 
         <TouchableOpacity
-          onPress={() => goToHome(currentNavigatorUID)}
+          onPress={() => goToRoute("home")}
           style={styles.logInButton}
         >
           <CustomButton btnText="Log In" />
@@ -28,11 +31,10 @@ const Login = ({ currentNavigatorUID }) => {
       </View>
 
       <View style={styles.bottomWrapper}>
-        <TouchableOpacity style={styles.logInButton}>
+        <TouchableOpacity onPress={() => goToRoute("register")}>
           <Text style={styles.textButton}>Register</Text>
         </TouchableOpacity>
       </View>
-
     </View>
   );
 };
