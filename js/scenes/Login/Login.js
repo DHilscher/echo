@@ -23,7 +23,7 @@ const Login = ({ currentNavigatorUID }) => {
         <CustomSingleTextField placeholder="password" />
 
         <TouchableOpacity
-          onPress={() => goToHome(currentNavigatorUID)}
+          onPress={() => goToRoute("home")}
           style={styles.logInButton}
         >
           <CustomButton btnText="Log In" />
@@ -31,23 +31,10 @@ const Login = ({ currentNavigatorUID }) => {
       </View>
 
       <View style={styles.bottomWrapper}>
-        <TouchableOpacity style={styles.logInButton}>
+        <TouchableOpacity onPress={() => goToRoute("register")}>
           <Text style={styles.textButton}>Register</Text>
         </TouchableOpacity>
       </View>
-
-      <TouchableOpacity
-        onPress={() => goToRoute("home")}
-        style={styles.logInButton}
-      >
-        <CustomButton btnText="Log In" />
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => goToRoute("register")}
-        style={styles.logInButton}
-      >
-        <Text>Register</Text>
-      </TouchableOpacity>
     </View>
   );
 };
