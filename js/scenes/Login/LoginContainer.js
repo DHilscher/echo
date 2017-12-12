@@ -4,11 +4,7 @@ import Login from "./Login";
 import { connect } from "react-redux";
 
 class LoginContainer extends Component {
-  static route = {
-    navigationBar: {
-      title: "Login"
-    }
-  };
+
   render() {
     const { currentNavigatorUID } = this.props;
     console.log(currentNavigatorUID);
