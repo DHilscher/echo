@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import Setting from './Settings'
-
+import Setting from './Settings';
 
 class SettingsContainer extends Component {
   render() {
@@ -12,4 +11,4 @@ class SettingsContainer extends Component {
   }
 }
 
-export default SettingsContainer
+export default SettingsContainer;
