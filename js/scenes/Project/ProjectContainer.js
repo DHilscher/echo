@@ -5,6 +5,9 @@ import ProjectP2 from "./ProjectP2";
 import { connect } from "react-redux";
 
 import { nextProjectPage } from "../../redux/modules/project";
+import { projectTitle } from "../../redux/modules/projectReducer";
+import { projectDesc } from "../../redux/modules/projectReducer";
+import { addProject } from '../../config/models'
 
 class ProjectContainer extends Component {
   static route = {
@@ -12,22 +15,29 @@ class ProjectContainer extends Component {
       title: "New Project"
     }
   };
+
   componentDidMount() {
     this.props.projectPage;
   }
 
-  render() {
-    const { currentNavigatorUID, projectPage } = this.props;
+  handleChange = (value) => {
+    this.props.dispatch(projectTitle(value))
+  }
 
-    _nextPage = () => {
+  handleChange2 = (value) => {
+    this.props.dispatch(projectDesc(value))
+  }
+
+  render() {
+    const { currentNavigatorUID, projectPage, projectTitle, projectDesc } = this.props;
+
+    _nextPage = (title, desc) => {
       this.props.dispatch(nextProjectPage(projectPage + 1));
+      addProject(title, desc)
     };
 
-    console.log(projectPage);
-    console.log(currentNavigatorUID);
-
     if (projectPage === 1) {
-      return <ProjectP1 index={_nextPage} />;
+      return <ProjectP1 index={_nextPage} handleChange={this.handleChange} handleChange2={this.handleChange2} projectTitle={projectTitle} projectDesc={projectDesc} />;
     }
     if (projectPage === 2) {
       return <ProjectP2 />;
@@ -38,7 +48,9 @@ class ProjectContainer extends Component {
 const mapStateToProps = state => {
   return {
     currentNavigatorUID: state.navigation.currentNavigatorUID,
-    projectPage: state.project.projectPage
+    projectPage: state.project.projectPage,
+    projectTitle: state.projectReducer.projectTitle,
+    projectDesc: state.projectReducer.projectDesc
   };
 };
 export default connect(mapStateToProps)(ProjectContainer);
