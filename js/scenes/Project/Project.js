@@ -10,16 +10,16 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 
 import CustomButton from "../../components/Buttons/CustomButton";
-import { goToRoute } from "../../lib/navigationHelpers";
 
 import styles from "./styles";
 
-const Project = () => {
-  return (
+const Project = ({ projectTitle, projectDesc, handleProjectAdded, handleChange, handleChange2 }) => {
+  
+  return (  
     <View style={styles.containerP1}>
-      <TextInput style={styles.projectNameInput} placeholder="" />
+      <TextInput style={styles.projectNameInput} placeholder="" onChangeText={(text) => handleChange(text)}/>
       <Text style={styles.projectName}>Project Name</Text>
-      <TextInput style={styles.descriptionInput} placeholder="" />
+      <TextInput style={styles.descriptionInput} placeholder="" onChangeText={(text) => handleChange2(text)}/>
       <Text style={styles.description}>Description</Text>
       <Text style={styles.feedback}>
         Would you like to set a reminder to request feedback?
@@ -35,7 +35,7 @@ const Project = () => {
       <TextInput style={styles.yearInput} placeholder="" />
       <Text>Y</Text>
       <TouchableOpacity
-        onPress={() => goToRoute("projectAdded")}
+        onPress={() => handleProjectAdded(projectTitle, projectDesc)}
         style={styles.nextButton}
       >
         <CustomButton btnText="Next" />
