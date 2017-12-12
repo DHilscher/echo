@@ -1,3 +1,3 @@
-import Results from "./ResultsContainer";
+import ResultsContainer from "./ResultsContainer";
 
-export default Results;
+export default ResultsContainer;
