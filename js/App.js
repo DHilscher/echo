@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import * as firebase from 'firebase';
-import config from './config/firebase';
+import firebase from './config/firebase';
 import {
   NavigationContext,
   NavigationProvider,
@@ -10,15 +9,22 @@ import Router from "./navigation/routes";
 import Store from "./redux/store";
 import { Provider } from "react-redux";
 
+import { login, logout } from './redux/modules/authentication';
+
 const navigationContext = new NavigationContext({
   router: Router,
   store: Store
 });
 
-export default class App extends Component {
-  componentWillMount() {
-    firebase.initializeApp(config);
+firebase.auth().onAuthStateChanged(function(user) {
+  if(user) {
+    Store.dispatch(login(user))
+  } else {
+    Store.dispatch(logout())
   }
+})
+
+class App extends Component {
 
   render() {
     return (
@@ -28,10 +34,12 @@ export default class App extends Component {
           <StackNavigation
             navigatorUID="root"
             id="root"
-            initialRoute={Router.getRoute("home")}
+            initialRoute={Router.getRoute("login")}
           />
         </NavigationProvider>
       </Provider>
     );
   }
 }
+
+export default App
