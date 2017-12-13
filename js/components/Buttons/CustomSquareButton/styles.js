@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { colors, typography, textSizes } from '../../../config/styles';
+import { colors, typography, textSizes, margins } from '../../../config/styles';
 
 const styles = StyleSheet.create({
   squareWrapper: {
@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
     height: 90,
     backgroundColor: colors.yellow,
     justifyContent: 'center',
+    borderRadius: 15,
+    padding: margins.marginS,
+    marginBottom: margins.marginL,
   },
   squareButtonText: {
     fontFamily: typography.fontHeavy,

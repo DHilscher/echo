@@ -1,48 +1,63 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
+
+import { colors, typography, textSizes, margins } from '../../config/styles';
 
 export default StyleSheet.create({
+  headerNavBarWrapper: {
+    alignItems: 'center',
+  },
+  headerNavBar: {
+    width: '100%',
+    minHeight: 90,
+  },
+  pageTitleWrapper: {
+    backgroundColor: colors.darkGreen,
+    minHeight: 60,
+    justifyContent: 'center',
+    padding: margins.marginS,
+  },
+  textFieldText: {
+    fontFamily: typography.fontHeavy,
+    fontSize: textSizes.title2,
+    textAlign: 'center',
+    color: 'white',
+  },
+
   feedbackContainer:{
     height: '100%',
-    backgroundColor: 'magenta'
+    backgroundColor: colors.lightestGreen,
   },
-
-  logoContainer:{
-    height: 100,
-    alignItems: 'center',
+  questionWrapper: {
+    backgroundColor: colors.mainGreen,
     justifyContent: 'center',
-    backgroundColor: 'red'
+    padding: margins.marginL,
+    paddingBottom: margins.marginM,
   },
-
-  feedbacktitle:{
-    height: 60,
+  questionText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: textSizes.title3,
+    fontFamily: typography.fontHeavy,
+  },
+  surveyImage: {
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'orange'
+    backgroundColor: colors.lightestGreen,
+    paddingTop: margins.marginS,
+    paddingBottom: margins.marginL,
   },
-
-  feedbackQuestion:{
-    height: 100,
+  addButtonContainer: {
+    flex: 1,
+    height: 90,
+  },
+  mainGreenView: {
+    backgroundColor: colors.mainGreen,
+    height: 45,
+  },
+  lightGreenView: {
+    backgroundColor: colors.lightestGreen,
+    height: 45,
+  },
+  addButtonWrapper: {
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'yellow'
-  },
-
-  feedbackOptions:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'green'
-  },
-
-  feedbackOptionDivider:{
-    height: 2,
-    backgroundColor: 'white'
-  },
-
-  feedbackOptions2:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue'
   },
 })

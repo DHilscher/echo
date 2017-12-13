@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   headerWrapper: {
     flex: 2.5,
     backgroundColor: colors.backgroundLightGreen,
+    alignItems: "center"
   },
   headerTextWrapper: {
     flex: 1,

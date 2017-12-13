@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   fullWidthButtonText: {
-    fontFamily: typography.fontBlack,
+    fontFamily: typography.fontHeavy,
     fontSize: textSizes.title3,
     color: 'white',
     textAlign: 'center',

@@ -7,23 +7,6 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: colors.backgroundLightGreen,
   },
-
-  headerNavBar: {
-    width: '100%',
-    minHeight: 90,
-  },
-  pageTitleWrapper: {
-    backgroundColor: colors.darkGreen,
-    minHeight: 60,
-    justifyContent: 'center',
-    padding: margins.marginS,
-  },
-  pageTitle: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: textSizes.title2,
-    fontFamily: typography.fontBlack,
-  },
   settingSection: {
     padding: margins.marginL,
   },

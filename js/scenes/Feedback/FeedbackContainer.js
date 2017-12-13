@@ -4,11 +4,11 @@ import { Text, View } from "react-native";
 import FeedBack from "./Feedback";
 
 class FeedbackContainer extends Component {
-  static route = {
-    navigationBar: {
-      title: "Feedback"
-    }
-  };
+  // static route = {
+  //   navigationBar: {
+  //     title: "Feedback"
+  //   }
+  // };
   render() {
     return (
       <View>

@@ -11,6 +11,13 @@ import Scale from '../../components/Scale'
 const Survey = ({}) => {
   return (
     <View style={styles.feedbackContainer}>
+      <View style={styles.headerNavBarWrapper}>
+        <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
+      </View>
+      <View style={styles.pageTitleWrapper}>
+        <Text style={styles.pageTitle}>Settings</Text>
+      </View>
+      
       <View style={styles.logoContainer}><Text>ECHO</Text></View>
       <View style={styles.feedbacktitle}><Text>End of Proj. Eval</Text></View>
       <View style={styles.feedbackQuestion}><Text>What type of question do you want to ask?</Text></View>

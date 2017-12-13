@@ -1,4 +1,3 @@
-// This is a single button, and needs to be wrap by TouchableOpacity in scene.
 import React from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
