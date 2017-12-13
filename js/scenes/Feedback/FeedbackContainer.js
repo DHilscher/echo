@@ -6,7 +6,12 @@ import FeedBack from "./Feedback";
 class FeedbackContainer extends Component {
   static route = {
     navigationBar: {
-      title: "Feedback"
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
     }
   };
   render() {
