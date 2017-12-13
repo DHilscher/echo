@@ -1,20 +1,37 @@
 import React from "react";
-import { Text, View, TextInput } from "react-native";
-
-import CustomButton from "../../components/CustomButton";
-import { goToHome } from "../../lib/navigationHelpers";
+import { Text, View, TextInput, TouchableOpacity } from "react-native";
 
 import styles from "./styles";
+import { goToRoute } from "../../lib/navigationHelpers";
+import CustomButton from "../../components/Buttons/CustomButton";
+import CustomTextArea from "../../components/CustomTextField/CustomTextArea";
+import NavigationBar from "../../components/NavigationBar";
+
 
 const SendForm = () => {
   return (
-    <View style={styles.sendformContainer}>
+    <View style={styles.sendFormContainer}>
 
-      <View style={styles.logoContainer}><Text>echo</Text></View>
-      <View style={styles.sendformTitle}><Text>Send form</Text></View>
-      <View style={styles.sendformMessage}><Text>Customize your message below!</Text></View>
-      <TextInput multiline={true} />
-      <CustomButton btnText={'Next'} />
+      <NavigationBar pageTitle="Send Form"/>
+
+      <View style={styles.questionWrapper}>
+        <Text style={styles.questionText}>Customize your message below!</Text>
+      </View>
+
+      <View style={styles.messageWrapper}>
+
+        <CustomTextArea 
+          defaultValue="Hi [Name of recipient], it’s Jenny! 
+          I was wondering if you had some time to fill out a 
+          quick feedback form so I can know how I am performing, 
+          so I can keep growing. Thanks so much for your time." 
+          />
+
+          <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendFormEmail")}>
+            <CustomButton btnText={'Next'} />
+          </TouchableOpacity>
+
+      </View>
       
     </View>
   );

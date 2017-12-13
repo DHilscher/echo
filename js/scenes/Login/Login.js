@@ -19,7 +19,7 @@ const Login = ({ currentNavigatorUID }) => {
       </View>
 
       <View style={styles.loginContentWrapper}>
-        <CustomSingleTextField placeholder="username" />
+        <CustomSingleTextField placeholder="email" />
         <CustomSingleTextField placeholder="password" />
 
         <TouchableOpacity

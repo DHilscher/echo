@@ -6,7 +6,7 @@ import styles from './styles';
 import AddButton from "../../components/Buttons/AddButton";
 import { colors } from "../../config/styles";
 
-const CreateFormStep1 = ({}) => {
+const CreateFormStep1 = ({handleInputChange}) => {
   return (
     <View style={styles.feedbackContainer}>
       <View style={styles.headerNavBarWrapper}>
@@ -21,6 +21,8 @@ const CreateFormStep1 = ({}) => {
           placeholderTextColor={colors.lightestGreen}
           selectionColor={colors.yellow}
           clearButtonMode="while-editing"
+          autoFocus={true}
+          onChangeText={(text) => handleInputChange(text)}
           style={styles.textFieldText} />
       </View>
 

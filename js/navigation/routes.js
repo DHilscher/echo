@@ -17,6 +17,8 @@ import {
   RegisterP4,
   RegisterP5
 } from "../components/Register";
+import SendForm from "../scenes/SendForm";
+import SendFormEmail from "../scenes/SendForm/SendEmail";
 
 const Router = createRouter(() => ({
   feedback: () => Feedback,
@@ -33,7 +35,9 @@ const Router = createRouter(() => ({
   register2: () => RegisterP2,
   register3: () => RegisterP3,
   register4: () => RegisterP4,
-  register5: () => RegisterP5
+  register5: () => RegisterP5,
+  sendForm: () => SendForm,
+  sendFormEmail: () => SendFormEmail
 }));
 
 export default Router;

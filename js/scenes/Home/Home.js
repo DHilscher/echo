@@ -12,7 +12,7 @@ const Home = () => (
     </View>
 
     <View style={styles.headerTextWrapper}>
-      <Text style={styles.headerText}>Hello, #name!</Text>
+      <Text style={styles.headerText}>Hello, full name!</Text>
     </View>
 
     <TouchableOpacity
