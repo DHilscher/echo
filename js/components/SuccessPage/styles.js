@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
 
+import { typography, colors } from "../../config/styles";
+
 export default StyleSheet.create({
   container: {
     alignItems: "center",
     paddingHorizontal: 20,
-    backgroundColor: "#3C898E",
+    backgroundColor: colors.backgroundLightGreen,
     height: "100%"
   },
   projectName: {
@@ -24,5 +26,20 @@ export default StyleSheet.create({
   },
   descriptionInput: {
     width: "100%"
+  },
+  image: {
+    marginTop: "20%",
+    marginBottom: "10%"
+  },
+  successText: {
+    fontSize: 24,
+    color: "white",
+    marginHorizontal: "16.5%",
+    textAlign: "center",
+    fontFamily: typography.fontHeavy,
+    marginBottom: "10%"
+  },
+  homeButton: {
+    marginBottom: "10%"
   }
 });
