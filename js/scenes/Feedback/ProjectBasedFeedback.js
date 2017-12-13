@@ -7,7 +7,12 @@ import PropTypes from "prop-types";
 class ProjectBasedFeedback extends Component {
   static route = {
     navigationBar: {
-      title: "Feedback"
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
     }
   };
   render() {
