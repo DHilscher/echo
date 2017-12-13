@@ -1,4 +1,3 @@
-// This is a square button, which can be used in project scene.
 import React from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';

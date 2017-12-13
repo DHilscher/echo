@@ -5,24 +5,19 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import { colors } from '../../config/styles.js';
 import SmallCustomButton from '../../components/Buttons/SmallCustomButton';
+import NavigationBar from "../../components/NavigationBar";
 
 const Setting = ({}) => {
   return (
     <View style={styles.settingContainer}>
-      <View>
-        <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-      </View>
-      <View style={styles.pageTitleWrapper}>
-        <Text style={styles.pageTitle}>Settings</Text>
-      </View>
-
+      <NavigationBar pageTitle="Settings"/>
       
       <View style={[styles.settingSection, styles.userInformationSection]}>
         <Text style={styles.sectionTitle}>User Information</Text>
 
         <View>
           <View style={styles.optionContainer}>
-            <Text style={styles.optionText}>username</Text>
+            <Text style={styles.optionText}>full name</Text>
             <TouchableOpacity activeOpacity={0.5}>
               <SmallCustomButton btnText="Change"/>
             </TouchableOpacity>

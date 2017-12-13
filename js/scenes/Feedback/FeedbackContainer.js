@@ -14,6 +14,7 @@ class FeedbackContainer extends Component {
       }
     }
   };
+
   render() {
     return (
       <View>

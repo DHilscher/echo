@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, Image, ScrollView } from "react-native";
+import PropTypes from "prop-types";
 
 import styles from "./styles";
-import PropTypes from "prop-types";
+import { goToRoute } from "../../lib/navigationHelpers";
+import NavigationBar from "../../components/NavigationBar";
+import CustomSquareButton from "../../components/Buttons/CustomSquareButton";
 
 class ProjectBasedFeedback extends Component {
   static route = {
@@ -15,20 +18,25 @@ class ProjectBasedFeedback extends Component {
       }
     }
   };
+
   render() {
     return (
-      <View style={styles.feedbackContainer}>
-        <View style={styles.logoContainer}>
-          <Text>ECHO</Text>
+      <ScrollView style={styles.projectContainer}>
+        <NavigationBar pageTitle="Feedback"/>
+        
+        <View style={styles.questionWrapper}>
+          <Text style={styles.questionText}>
+            Choose a project!
+          </Text>
         </View>
-        <View style={styles.feedbacktitle}>
-          <Text>Feedback</Text>
+
+        <View style={styles.optionProjectWrapper}>
+          <TouchableOpacity onPress={() => goToRoute("createForm")} activeOpacity={0.7}>
+            <CustomSquareButton btnText="Juice Truck"/>
+          </TouchableOpacity>
+          
         </View>
-        <View style={styles.feedbackQuestion}>
-          <Text>Choose a project!</Text>
-        </View>
-        <Text>Juice Truck</Text>
-      </View>
+      </ScrollView>
     );
   }
 }
