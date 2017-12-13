@@ -4,11 +4,17 @@ import { Text, View } from "react-native";
 import FeedBack from "./Feedback";
 
 class FeedbackContainer extends Component {
-  // static route = {
-  //   navigationBar: {
-  //     title: "Feedback"
-  //   }
-  // };
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
+
   render() {
     return (
       <View>

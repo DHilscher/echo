@@ -7,7 +7,12 @@ import styles from "./styles";
 class ProjectAdded extends Component {
   static route = {
     navigationBar: {
-      title: "New Project"
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
     }
   };
   render() {

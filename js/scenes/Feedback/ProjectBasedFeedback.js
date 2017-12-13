@@ -6,12 +6,19 @@ import styles from "./styles";
 import { goToRoute } from "../../lib/navigationHelpers";
 import NavigationBar from "../../components/NavigationBar";
 import CustomSquareButton from "../../components/Buttons/CustomSquareButton";
+
 class ProjectBasedFeedback extends Component {
-  // static route = {
-  //   navigationBar: {
-  //     title: "Feedback"
-  //   }
-  // };
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
+
   render() {
     return (
       <ScrollView style={styles.projectContainer}>

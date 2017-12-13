@@ -7,12 +7,17 @@ import { goToRoute } from "../../lib/navigationHelpers";
 import { nextProjectPage } from "../../redux/modules/project";
 import { projectTitle } from "../../redux/modules/projectReducer";
 import { projectDesc } from "../../redux/modules/projectReducer";
-import { addProject } from '../../config/models'
+import { addProject } from "../../config/models";
 
 class ProjectContainer extends Component {
   static route = {
     navigationBar: {
-      title: "New Project"
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
     }
   };
 
@@ -20,22 +25,21 @@ class ProjectContainer extends Component {
     this.props.projectPage;
   }
 
-  handleChange = (value) => {
-    this.props.dispatch(projectTitle(value))
-  }
+  handleChange = value => {
+    this.props.dispatch(projectTitle(value));
+  };
 
-  handleChange2 = (value) => {
-    this.props.dispatch(projectDesc(value))
-  }
+  handleChange2 = value => {
+    this.props.dispatch(projectDesc(value));
+  };
 
   render() {
     const { projectTitle, projectDesc } = this.props;
-    
-    handleProjectAdded = (title, desc) => {
-      goToRoute("projectAdded")
-      addProject(title, desc)
-    };
 
+    handleProjectAdded = (title, desc) => {
+      goToRoute("projectAdded");
+      addProject(title, desc);
+    };
 
     return (
       <Project
@@ -45,7 +49,7 @@ class ProjectContainer extends Component {
         handleChange={this.handleChange}
         handleChange2={this.handleChange2}
       />
-    )
+    );
   }
 }
 
