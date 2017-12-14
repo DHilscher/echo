@@ -9,7 +9,7 @@ const SingleTextField = ({ placeholder }) => (
   <View>
     <TextInput 
       placeholder={placeholder} 
-      placeholderTextColor={colors.lightestGreen}
+      placeholderTextColor={colors.mainGreen}
       selectionColor={colors.yellow}
       autoCapitalize = "none"
       style={styles.textFieldText} 

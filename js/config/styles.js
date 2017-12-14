@@ -6,6 +6,7 @@ export const colors = {
   red: '#FD3C3C',
   yellow: '#F7B85A',
   lightYellow: '#F8CF91',
+  lighterRed: 'rgba(253,60,60,0.4)',
 };
 
 export const typography = {
