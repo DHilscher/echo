@@ -8,6 +8,7 @@ import CustomButton from '../../components/Buttons/CustomButton'
 import { goToRoute } from "../../lib/navigationHelpers";
 import SurveyQuestion from '../../components/SurveyQuestion'
 import { connect } from "react-redux";
+import AddButton from '../../components/Buttons/AddButton'
 
 const question = 'How was sjgjsdkgjdshglsd'
 
@@ -43,7 +44,7 @@ class SurveyCollection extends Component {
       ))}
   
       <TouchableOpacity onPress={() => goToRoute("survey")} activeOpacity={0.7} style={styles.addbutton}>
-        <CustomButton btnText={'PLUS'} />
+        <AddButton />
       </TouchableOpacity>
   
       <TouchableOpacity onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7} style={styles.nextbutton}>
