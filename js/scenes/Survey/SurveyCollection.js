@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity} from 'react-native'
+import { Text, View, TouchableOpacity, Image } from 'react-native'
 
 import styles from './styles'
 import PropTypes from 'prop-types'
@@ -32,18 +32,21 @@ class SurveyCollection extends Component {
 
     return (
       <View style={styles.feedbackContainer}>
-        <View style={styles.logoContainer}><Text>ECHO</Text></View>
-        <View style={styles.feedbacktitle}><Text>End of Proj. Eval</Text></View>
+        <View style={styles.headerNavBarWrapper}>
+          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
+        </View>
+
+        <View style={styles.feedbacktitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
 
       {collection.map((survey, index) => (
         <SurveyQuestion key={survey.question} surveyQuestion={survey.question.length > 10 ? `${survey.question.slice(0, 15)}...` : survey.question} surveyType={survey.type} surveyNum={index+1} />
       ))}
   
-      <TouchableOpacity onPress={() => goToRoute("survey")} activeOpacity={0.7}>
+      <TouchableOpacity onPress={() => goToRoute("survey")} activeOpacity={0.7} style={styles.addbutton}>
         <CustomButton btnText={'PLUS'} />
       </TouchableOpacity>
   
-      <TouchableOpacity onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7}>
+      <TouchableOpacity onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7} style={styles.nextbutton}>
         <CustomButton btnText={'Next'} />
       </TouchableOpacity>
       </View>

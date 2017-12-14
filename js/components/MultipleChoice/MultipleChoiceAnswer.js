@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -29,16 +29,21 @@ class MultipleChoiceAnswer extends Component {
   render() {
     return (
 
-      <View>
-        <View style={styles.logoContainer}><Text>ECHO</Text></View>
-        <View style={styles.feedbacktitle}><Text>End of Proj. Eval</Text></View>
-        <Text>Please enter your choices.</Text>
+      <View style={styles.multipleContainer}>
+        <View style={styles.headerNavBarWrapper}>
+          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
+        </View>
+
+        <View style={styles.multipletitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
+
+        <Text style={styles.multipleinstruction}>Please enter your choices.</Text>
     
-        <View style={styles.MCAnswerView}><Text>A</Text><TextInput editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleAnswerA(text)} /></View>
-        <View style={styles.MCAnswerView}><Text>B</Text><TextInput editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleAnswerB(text)} /></View>
-        <View style={styles.MCAnswerView}><Text>C</Text><TextInput editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleAnswerC(text)} /></View>
-        <View style={styles.MCAnswerView}><Text>D</Text><TextInput editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleAnswerD(text)} /></View>
-        <TouchableOpacity onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7}>
+        <View style={styles.MCAnswerView}><Text style={styles.letteroption}>A</Text><TextInput editable={true} style={styles.textInputOptionStyle} onChangeText={(text) => this.handleAnswerA(text)} /></View>
+        <View style={styles.MCAnswerView}><Text style={styles.letteroption}>B</Text><TextInput editable={true} style={styles.textInputOptionStyle} onChangeText={(text) => this.handleAnswerB(text)} /></View>
+        <View style={styles.MCAnswerView}><Text style={styles.letteroption}>C</Text><TextInput editable={true} style={styles.textInputOptionStyle} onChangeText={(text) => this.handleAnswerC(text)} /></View>
+        <View style={styles.MCAnswerView}><Text style={styles.letteroption}>D</Text><TextInput editable={true} style={styles.textInputOptionStyle} onChangeText={(text) => this.handleAnswerD(text)} /></View>
+
+        <TouchableOpacity style={styles.addbutton}onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7}>
           <CustomButton btnText={'Add'} />
         </TouchableOpacity>
       </View>

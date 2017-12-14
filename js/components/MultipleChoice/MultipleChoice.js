@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -17,14 +17,23 @@ class MultipleChoice extends Component {
   render() { 
     return (
 
-      <View>
-        <View style={styles.logoContainer}><Text>ECHO</Text></View>
-        <View style={styles.feedbacktitle}><Text>End of Proj. Eval</Text></View>
-        <Text>Please enter question and be detailed!</Text>
+      <View style={styles.multipleContainer}>
+        <View style={styles.headerNavBarWrapper}>
+          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
+        </View>
+
+        <View style={styles.multipletitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
+
+        <Text style={styles.multipleinstruction}>Please enter question and be detailed!</Text>
+
         <TextInput multiline={true} editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleMultipleQuestion(text)} />
+
         <TouchableOpacity onPress={() => goToRoute("multipleChoiceAnswer")} activeOpacity={0.7}>
           <CustomButton btnText={'Add'} />
         </TouchableOpacity>
+
+        <Image style={styles.target} source={require ('../../assets/images/icon-target.png')}/>
+
       </View>
 
     )
