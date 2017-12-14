@@ -27,10 +27,6 @@ class MultipleChoiceAnswer extends Component {
   }
 
   render() {
-      console.log('A',this.props.multipleAnswersA)
-      console.log('B',this.props.multipleAnswersB)
-      console.log('C',this.props.multipleAnswersC)
-      console.log('D',this.props.multipleAnswersD)
     return (
 
       <View>

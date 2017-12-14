@@ -15,7 +15,6 @@ class Scale extends Component {
   }
 
   render() {
-    console.log(this.props.scaleQuestion)
     return (
 
       <View style={styles.writtenContainer}>

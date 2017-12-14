@@ -14,8 +14,7 @@ class MultipleChoice extends Component {
     this.props.dispatch(multipleChoiceQuestion(value))
   }
 
-  render() {
-    console.log(this.props.multipleQuestion)    
+  render() { 
     return (
 
       <View>

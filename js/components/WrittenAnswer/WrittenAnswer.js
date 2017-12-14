@@ -15,7 +15,6 @@ class WrittenAnswer extends Component {
   }
 
   render() {
-    console.log(this.props.writtenQuestion)
     return (
 
       <View style={styles.writtenContainer}>

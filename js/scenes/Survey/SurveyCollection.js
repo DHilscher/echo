@@ -15,10 +15,6 @@ class SurveyCollection extends Component {
 
   render() {
     const {multipleQuestion, writtenQuestion, scaleQuestion} = this.props
-    console.log('surColl',this.props.multipleQuestion)
-    console.log('surColl',this.props.writtenQuestion)
-    console.log('surColl',this.props.scaleQuestion)
-
     let collection = []
 
     if(writtenQuestion){
