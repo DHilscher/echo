@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Image, TextInput } from "react-native";
+import { Text, View, Image, TextInput, ScrollView } from "react-native";
 
 import Results from "./Results";
 import styles from "./styles";
@@ -28,22 +28,24 @@ class ResultsContainer extends Component {
 
   render() {
     return (
-      <View>
-        <View style={styles.logoContainer}>
-          <Text>echo</Text>
-        </View>
-        <View style={styles.resultTitle}>
-          <Text>Results</Text>
-        </View>
+      <ScrollView style={styles.resultContainer}>
+        <View style={styles.headerNavBarWrapper}>
+         <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
+       </View>
+
+       <View style={styles.titlecontainer}><Text style={styles.scenetitle}>Results</Text></View>
+
         <View style={styles.resultSearch}>
           <TextInput style={styles.searchBar} />
           <Image source={require("../../assets/images/icon-magnifier.png")} />
         </View>
+
         <Results
           ResultTabs={this.state.ResultTabs}
           changeTab={this.changeTab}
         />
-      </View>
+
+      </ScrollView>
     );
   }
 }

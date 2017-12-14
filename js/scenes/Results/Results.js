@@ -23,16 +23,16 @@ const Results = ({ ResultTabs, changeTab }) => {
   }
 
   return (
-    <View style={styles.resultContainer}>
-      <View>
+    <View>
+      <View style={styles.tabcontainer}>
         <TouchableWithoutFeedback onPress={() => changeTab("general")}>
           <View style={styles.generalTab}>
-            <Text>General</Text>
+            <Text style={styles.tabtitle}>General</Text>
           </View>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={() => changeTab("project")}>
           <View style={styles.projectTab}>
-            <Text>Projects</Text>
+            <Text style={styles.tabtitle}>Projects</Text>
           </View>
         </TouchableWithoutFeedback>
       </View>
