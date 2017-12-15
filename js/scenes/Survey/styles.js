@@ -1,37 +1,40 @@
 import { StyleSheet } from 'react-native'
 
+import { colors, margins } from '../../config/styles';
+
 export default StyleSheet.create({
   feedbackContainer:{
     height: '100%',
-    backgroundColor: 'violet'
+    backgroundColor: colors.mainGreen
   },
 
   logoContainer:{
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red'
+    backgroundColor: 'white'
   },
 
   feedbacktitle:{
     height: 60,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'orange'
+    backgroundColor: colors.darkGreen,
+    // marginBottom: margins.marginS
   },
 
   feedbackQuestion:{
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'yellow'
+    backgroundColor: colors.mainGreen
   },
 
   feedbackOptions:{
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'green'
+    backgroundColor: '#FFFFFF80'
   },
 
   feedbackOptionDivider:{
@@ -43,13 +46,17 @@ export default StyleSheet.create({
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'blue'
+    backgroundColor:'#FFFFFF80'
   },
 
   feedbackOptions3:{
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'indigo'
+    backgroundColor: '#FFFFFF80'
   },
+
+  surveyTitle:{
+    color: 'white'
+  }
 })

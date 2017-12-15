@@ -10,6 +10,8 @@ import Settings from "../scenes/Settings";
 import Home from "../scenes/Home";
 import ProjectAdded from "../components/ProjectAdded";
 import CreateForm from "../scenes/CreateForm";
+import Survey from "../scenes/Survey"
+import SurveyCollection from "../scenes/Survey/SurveyCollection"
 import ProjectBasedFeedback from "../scenes/Feedback/ProjectBasedFeedback";
 import {
   RegisterP2,
@@ -17,6 +19,10 @@ import {
   RegisterP4,
   RegisterP5
 } from "../components/Register";
+import WrittenAnswer from "../components/WrittenAnswer"
+import MultipleChoice from "../components/MultipleChoice"
+import MultipleChoiceAnswer from "../components/MultipleChoice/MultipleChoiceAnswer"
+import Scale from "../components/Scale"
 
 const Router = createRouter(() => ({
   feedback: () => Feedback,
@@ -33,7 +39,13 @@ const Router = createRouter(() => ({
   register2: () => RegisterP2,
   register3: () => RegisterP3,
   register4: () => RegisterP4,
-  register5: () => RegisterP5
+  register5: () => RegisterP5,
+  survey: () => Survey,
+  surveyCollection: () => SurveyCollection,
+  writtenAnswer: () => WrittenAnswer,
+  multipleChoice: () => MultipleChoice,
+  multipleChoiceAnswer: () => MultipleChoiceAnswer,
+  scale: () => Scale
 }));
 
 export default Router;
