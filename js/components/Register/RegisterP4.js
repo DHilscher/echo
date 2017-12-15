@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
 import * as firebase from 'firebase';
+import { connect } from 'react-redux';
 
 import { styles } from "./styles";
 import { colors } from "../../config/styles";
@@ -21,9 +22,18 @@ class Register4 extends Component {
 
     handleSubmit = (event) => {
         const { email, password } = this.state
+        const { fullname, occupation } = this.props
+
         firebase
           .auth()
           .createUserWithEmailAndPassword(email, password)
+                     .then( user => firebase.database()
+                                         .ref(`users/${user.uid}`)
+                                         .set({
+                                             email: email,
+                                             fullname: fullname,
+                                             occupation: occupation
+                                         }))
           .catch(() => {
             this.setState({ error: "Register Failed."});
         });
@@ -35,7 +45,6 @@ class Register4 extends Component {
     }
 
     render() {
-        const { index, signUp } = this.props
         const isEnabled = this.state.email.length > 0 && this.state.password.length > 0;
         
         return (
@@ -94,4 +103,11 @@ class Register4 extends Component {
     }
 }
 
-export default Register4;
+const mapStateToProps = state => {
+    return {
+        fullname: state.signup.fullname,
+        occupation: state.signup.occupation 
+    }
+  }
+  
+  export default connect(mapStateToProps)(Register4)

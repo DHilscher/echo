@@ -1,14 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
-
+import { connect } from 'react-redux';
 import { styles } from "./styles";
 import { colors } from "../../config/styles";
 import { goToRoute } from "../../lib/navigationHelpers";
+import { fullname } from "../../redux/modules/signup";
 import ArrowButton from "../Buttons/ArrowButton";
 import TopStepIndicator from "../TopStepIndicator";
 import CustomSingleTextField from "../CustomTextField/CustomSingleTextField";
 
-const Register2 = () => {
+class Register2 extends Component {
+
+    handleNameChange = (value) => {
+        this.props.dispatch(fullname(value))
+    }
+    render() {
   return (
     <View style={styles.registerContainer}>
       <Image
@@ -23,7 +29,7 @@ const Register2 = () => {
         <View style={styles.registerContentContainer}>
           <View style={styles.contentQuestionWrapper}>
             <Text style={styles.registerExplainText}>Tell us more about yourself?</Text>
-            <CustomSingleTextField placeholder="Your first name & last name"/>
+            <CustomSingleTextField placeholder="Your first name & last name" onChangeText={(text) => this.handleNameChange(text)}/>
           </View>
 
           <View style={styles.arrowButtonWrapper}>
@@ -39,6 +45,13 @@ const Register2 = () => {
 
     </View>
   );
+}
 };
 
-export default Register2;
+const mapStateToProps = state => {
+    return {
+       fullname: state.signup.fullname 
+    }
+}
+
+export default connect(mapStateToProps)(Register2)
