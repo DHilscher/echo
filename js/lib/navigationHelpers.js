@@ -5,3 +5,10 @@ import Router from "../navigation/routes";
 export const goToRoute = route => {
   Store.dispatch(NavigationActions.push("root", Router.getRoute(`${route}`)));
 };
+
+export const goToRouteWithProps = (route, passedProps) => {
+  Store.dispatch(NavigationActions.push(
+    "root", 
+    Router.getRoute(`${route}`, {passedProps})
+  ));
+};
