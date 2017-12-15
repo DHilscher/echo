@@ -31,7 +31,7 @@ class Register3 extends Component {
         <View style={styles.registerContentContainer}>
           <View style={styles.contentQuestionWrapper}>
             <Text style={styles.registerExplainText}>What industry of freelance do work in?</Text>
-            <CustomSingleTextField placeholder="Your professional field" onChangeText={(text) => this.handleOccupationChange(text)}/>
+            <CustomSingleTextField placeholder="Your professional field" handler={(text) => this.handleOccupationChange(text)}/>
           </View>
 
           <View style={styles.arrowButtonWrapper}>
