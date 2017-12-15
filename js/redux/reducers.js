@@ -7,6 +7,9 @@ import authReducer from './modules/authentication';
 import answerReducer from "./modules/answer"
 import ProjectNav from "./modules/project";
 import projectReducer from './modules/projectReducer'
+import writtenAnswerReducer from './modules/writtenAnswerReducer'
+import scaleAnswerReducer from './modules/scaleAnswerReducer'
+import multipleChoiceReducer from './modules/multipleChoiceReducer'
 
 export default combineReducers({
   navigation: NavigationReducer,
@@ -16,4 +19,8 @@ export default combineReducers({
   auth: authReducer,
   answerReducer,
   projectReducer,
+  writtenAnswerReducer,
+  scaleAnswerReducer,
+  multipleChoiceReducer
+
 });

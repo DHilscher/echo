@@ -1,55 +1,76 @@
 import { StyleSheet } from 'react-native'
 
+import { colors, margins, textSizes, typography } from '../../config/styles';
+
 export default StyleSheet.create({
   feedbackContainer:{
     height: '100%',
-    backgroundColor: 'violet'
+    backgroundColor: colors.mainGreen
   },
 
-  logoContainer:{
-    height: 100,
+  surveytitlecontainer:{
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red'
+    backgroundColor: colors.darkGreen
   },
 
-  feedbacktitle:{
+  scenetitle:{
+    color: 'white',
+    fontSize: textSizes.title2,
+    fontFamily: typography.fontBlack
+  },
+
+  surveyTitle:{
+    color: 'white',
+    fontSize: textSizes.bodyL,
+    fontFamily: typography.fontHeavy,
+    paddingHorizontal: 80,
+    textAlign: 'center'
+  },
+
+  feedbacktitlecontainer:{
     height: 60,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'orange'
+    backgroundColor: colors.darkGreen,
+    marginBottom: margins.marginS
   },
 
   feedbackQuestion:{
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'yellow'
+    backgroundColor: colors.mainGreen
   },
 
   feedbackOptions:{
-    height: 100,
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'green'
+    backgroundColor: '#FFFFFF80'
+  },
+
+  feedbackTitle:{
+    color: 'white',
+    fontSize: textSizes.title3,
+    fontFamily: typography.fontBlack
   },
 
   feedbackOptionDivider:{
-    height: 2,
+    height: 2.5,
     backgroundColor: 'white'
   },
 
-  feedbackOptions2:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue'
+  nextbutton:{
+    position: 'absolute',
+    alignSelf: 'center',
+    bottom: 40
   },
 
-  feedbackOptions3:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'indigo'
-  },
+  addbutton:{
+    position: 'absolute',
+    right: 30,
+    bottom: 100
+  }
 })

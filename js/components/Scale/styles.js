@@ -1,66 +1,44 @@
 import { StyleSheet } from 'react-native'
 
+import { colors, margins, textSizes, typography } from '../../config/styles';
+
 export default StyleSheet.create({
-  feedbackContainer:{
-    height: '100%',
-    backgroundColor: 'magenta'
+  scaleContainer:{
+    backgroundColor: colors.mainGreen,
+    height: '100%'
   },
 
-  logoContainer:{
-    height: 100,
+  scaletitlecontainer:{
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red'
+    backgroundColor: colors.darkGreen
   },
 
-  feedbacktitle:{
-    height: 60,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'orange'
+  scenetitle:{
+    color: 'white',
+    fontSize: textSizes.title2,
+    fontFamily: typography.fontBlack
   },
 
-  feedbackQuestion:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'yellow'
-  },
-
-  feedbackOptions:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'green'
-  },
-
-  feedbackOptionDivider:{
-    height: 2,
-    backgroundColor: 'white'
-  },
-
-  feedbackOptions2:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue'
-  },
-
-  feedbackOptions3:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'indigo'
+  scaleinstruction:{
+    color: 'white',
+    fontSize: textSizes.bodyL,
+    fontFamily: typography.fontBlack,
+    margin: margins.marginL,
+    marginHorizontal: 80,
+    textAlign: 'center'
   },
 
   textInputStyle:{
-    backgroundColor: 'red',
-    padding: 10,
-    width: '80%'
-  },
-
-  MCAnswerView:{
-    flexDirection: 'row',
-    marginBottom: 10
+    backgroundColor: '#FFFFFF80',
+    color: colors.darkGreen,
+    margin: margins.marginL,
+    padding: margins.marginM,
+    fontFamily: typography.fontHeavy,
+    height: 100,
+    borderRadius: 10,
+    marginBottom: 40
   }
+
 })

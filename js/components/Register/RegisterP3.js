@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
-import StepIndicator from "react-native-step-indicator";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
-import { goToRoute } from "../../lib/navigationHelpers";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import { occupation } from "../../redux/modules/signup";
-import CustomButton from "../Buttons/CustomButton";
-import { indicatorStyles, styles } from "./styles";
+import { connect } from 'react-redux';
+import { styles } from "./styles";
+import { colors } from "../../config/styles";
+import { goToRoute } from "../../lib/navigationHelpers";
+import ArrowButton from "../Buttons/ArrowButton";
+import TopStepIndicator from "../TopStepIndicator";
+import CustomSingleTextField from "../CustomTextField/CustomSingleTextField";
 
 class Register3 extends Component { 
 
@@ -13,29 +15,39 @@ class Register3 extends Component {
     this.props.dispatch(occupation(value))
     
   }
+  
+  render() {  
+  return (
+    <View style={styles.registerContainer}>
+      <Image
+        style={styles.image}
+        source={require("../../assets/images/registration/registration-3.png")}
+      />
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Image
-          style={styles.image}
-          source={require("../../assets/images/registration/registration-3.png")}
-        />
-        <View>
-          <View>
-            <Text>What industry of freelance do work in?</Text>
+        <View style={styles.stepIndicatorWrapper}>
+          <TopStepIndicator stepCount={3} currentPosition={1}/>
+        </View>
+
+        <View style={styles.registerContentContainer}>
+          <View style={styles.contentQuestionWrapper}>
+            <Text style={styles.registerExplainText}>What industry of freelance do work in?</Text>
+            <CustomSingleTextField placeholder="Your professional field" onChangeText={(text) => this.handleOccupationChange(text)}/>
           </View>
-          <View>
-            <TextInput editable={true} maxLength={30} onChangeText={(text) => this.handleOccupationChange(text)} />
-            <Text>Your professional field</Text>
+
+          <View style={styles.arrowButtonWrapper}>
+            <TouchableOpacity onPress={() => goToRoute("register4")}>
+              <ArrowButton color={colors.red} />
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={() => goToRoute("register4")}>
-            <CustomButton btnText={">"} />
+
+          <TouchableOpacity onPress={() => goToRoute("login")}>
+            <Text style={styles.loginText}>Login</Text>
           </TouchableOpacity>
         </View>
-      </View>
-    );
-  }
+
+    </View>
+  );
+}
 };
 
 const mapStateToProps = state => {
