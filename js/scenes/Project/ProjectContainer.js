@@ -10,6 +10,13 @@ import { projectDesc } from "../../redux/modules/projectReducer";
 import { addProject } from "../../config/models";
 
 class ProjectContainer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showReminder: false
+    };
+  }
+
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
@@ -33,6 +40,14 @@ class ProjectContainer extends Component {
     this.props.dispatch(projectDesc(value));
   };
 
+  handleReminder = () => {
+    if (this.state.showReminder === true) {
+      this.setState({ showReminder: false });
+    } else {
+      this.setState({ showReminder: true });
+    }
+  };
+
   render() {
     const { projectTitle, projectDesc } = this.props;
 
@@ -48,6 +63,8 @@ class ProjectContainer extends Component {
         handleProjectAdded={handleProjectAdded}
         handleChange={this.handleChange}
         handleChange2={this.handleChange2}
+        showReminder={this.state.showReminder}
+        handleReminder={this.handleReminder}
       />
     );
   }

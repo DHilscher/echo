@@ -16,7 +16,12 @@ class ProjectAdded extends Component {
     }
   };
   render() {
-    return <SuccessPage successText="Your project has been added!" />;
+    return (
+      <SuccessPage
+        pageTitle="NewProject"
+        successText="Your project has been added!"
+      />
+    );
   }
 }
 

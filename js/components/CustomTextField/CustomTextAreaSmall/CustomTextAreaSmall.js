@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import styles from "./styles";
 import { colors } from "../../../config/styles";
 
-const CustomTextArea = ({ placeholder, defaultValue, handler }) => (
+const CustomTextAreaSmall = ({ placeholder, defaultValue, handler }) => (
   <View style={styles.textAreaWrapper}>
     <TextInput
       placeholder={placeholder}
@@ -19,9 +19,9 @@ const CustomTextArea = ({ placeholder, defaultValue, handler }) => (
   </View>
 );
 
-CustomTextArea.propTypes = {
+CustomTextAreaSmall.propTypes = {
   placeholder: PropTypes.string,
   defaultValue: PropTypes.string
 };
 
-export default CustomTextArea;
+export default CustomTextAreaSmall;
