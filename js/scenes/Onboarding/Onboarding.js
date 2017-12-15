@@ -6,31 +6,9 @@ import Icon from "react-native-vector-icons/Ionicons";
 import styles from "./styles";
 import { colors } from "../../config/styles";
 import CustomButton from "../../components/Buttons/CustomButton";
+import TopStepIndicator from "../../components/TopStepIndicator";
+import ArrowButton from "../../components/Buttons/ArrowButton";
 import { goToRoute } from "../../lib/navigationHelpers";
-
-const topIndicatorStyles = {
-  stepIndicatorSize: 18,
-  currentStepIndicatorSize: 23,
-  separatorStrokeWidth: 4,
-  currentStepStrokeWidth: 4,
-  stepStrokeCurrentColor: colors.red,
-  stepStrokeWidth: 4,
-  stepStrokeFinishedColor: colors.red,
-  stepStrokeUnFinishedColor: colors.red,
-  separatorFinishedColor: colors.red,
-  separatorUnFinishedColor: colors.red,
-  stepIndicatorFinishedColor: colors.red,
-  stepIndicatorUnFinishedColor: colors.lightestGreen,
-  stepIndicatorCurrentColor: colors.red,
-  stepIndicatorLabelFontSize: 1,
-  currentStepIndicatorLabelFontSize: 1,
-  stepIndicatorLabelCurrentColor: "transparent",
-  stepIndicatorLabelFinishedColor: "transparent",
-  stepIndicatorLabelUnFinishedColor: "transparent",
-  labelColor: "transparent",
-  labelSize: 1,
-  currentStepLabelColor: "transparent"
-};
 
 class Onboarding extends Component {
   constructor() {
@@ -108,11 +86,7 @@ class Onboarding extends Component {
       <View style={styles.onboardingWrapper}>
         {this.state.currentPosition < 3 ? (
           <View style={styles.stepIndicatorWrapper}>
-            <StepIndicator
-              stepCount={3}
-              customStyles={topIndicatorStyles}
-              currentPosition={this.state.currentPosition}
-            />
+            <TopStepIndicator stepCount={3} currentPosition={this.state.currentPosition}/>
           </View>
         ) : (
           false
@@ -124,11 +98,7 @@ class Onboarding extends Component {
               onPress={e => this.onPageChange(this.state.currentPosition + 1)}
             >
               <View style={styles.arrowButton}>
-                <Icon
-                  name="ios-arrow-dropright-circle"
-                  size={70}
-                  color={colors.red}
-                />
+                <ArrowButton color={colors.red}/>
               </View>
             </TouchableOpacity>
             {this.state.currentPosition < 1 ? (

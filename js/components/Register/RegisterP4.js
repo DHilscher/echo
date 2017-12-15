@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import React, { Component } from "react";
+import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
 import * as firebase from 'firebase';
+
+import { styles } from "./styles";
+import { colors } from "../../config/styles";
 import { goToRoute } from "../../lib/navigationHelpers";
-import CustomButton from "../Buttons/CustomButton";
-import {TitledInput} from '../CustomTextField';
-import { indicatorStyles, styles } from './styles';
+import ArrowButton from "../Buttons/ArrowButton";
+import TopStepIndicator from "../TopStepIndicator";
+import CustomSingleTextField from "../CustomTextField/CustomSingleTextField";
 
 class Register4 extends Component {
     constructor(){
@@ -36,33 +39,54 @@ class Register4 extends Component {
         const isEnabled = this.state.email.length > 0 && this.state.password.length > 0;
         
         return (
-            <View style={styles.container}>
-                <Image style={styles.image}
-                    source={require('../../assets/images/registration/registration-4.png')}
+            <View style={styles.registerContainer}>
+                <Image
+                    style={styles.image}
+                    source={require("../../assets/images/registration/registration-4.png")}
                 />
-                <View>
-                    <View>
-                        <Text>Your email address:</Text>
-                        <TitledInput 
+                <View style={styles.stepIndicatorWrapper}>
+                    <TopStepIndicator stepCount={3} currentPosition={2}/>
+                </View>
+
+                <View style={styles.registerContentContainer}>
+                    <View style={styles.contentQuestionWrapper}>
+                        <Text style={styles.registerExplainText}>Your email address:</Text>
+                        <TextInput 
                             label='Email Address'
                             placeholder='you@email.com'
-                            value={this.state.email}
-                            onChangeText={email => this.setState({ email })}
-                        />
-                    </View>
-                    <View>
-                        <Text>Create a password:</Text>
-                        <TitledInput 
-                            label='Password'
+                            placeholderTextColor={colors.mainGreen}
+                            selectionColor={colors.yellow}
+                            autoCapitalize = "none"
                             autoCorrect={false}
-                            placeholder='*******'
+                            style={styles.textFieldText} 
+                            value={this.state.email}
+                            onChangeText={email => this.setState({ email })} />
+
+                        <Text style={styles.registerExplainText}>Create a password:</Text>
+                        <TextInput 
+                            label='Password'
+                            placeholder='password'
+                            placeholderTextColor={colors.mainGreen}
+                            selectionColor={colors.yellow}
+                            autoCapitalize = "none"
+                            autoCorrect={false}
+                            style={styles.textFieldText} 
                             secureTextEntry
                             value={this.state.password}
-                            onChangeText={password => this.setState({ password })}
-                        />
+                            onChangeText={password => this.setState({ password })} />
                     </View>
-                    <TouchableOpacity onPress={this.handleChange}>
-                        {isEnabled && <CustomButton btnText={'>'} /> }
+
+                    <View style={styles.arrowButtonWrapper}>
+                        { isEnabled ? 
+                            <TouchableOpacity onPress={this.handleChange}>
+                                <ArrowButton color={colors.red}/>
+                            </TouchableOpacity> :
+                            <ArrowButton color={colors.lighterRed}/> 
+                        }
+                    </View>
+
+                    <TouchableOpacity onPress={() => goToRoute("login")}>
+                        <Text style={styles.loginText}>Login</Text>
                     </TouchableOpacity>
                 </View>
             </View>
