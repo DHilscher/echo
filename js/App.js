@@ -24,13 +24,13 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 })
 
+
 class App extends Component {
 
   render() {
     return (
       <Provider store={Store}>
         <NavigationProvider context={navigationContext} router={Router}>
-
           <StackNavigation
             navigatorUID="root"
             id="root"

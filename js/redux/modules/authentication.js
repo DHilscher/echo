@@ -11,14 +11,13 @@ export const logout = () => ({
 })
 
 
-
-export default (state = {}, action) => {
+export default (state = {isAuthed: null}, action) => {
     
     switch(action.type) {
         case LOGIN:
-            return { ...state, user: action.payload };
+            return { ...state, user: action.payload, isAuthed: true };
         case LOGOUT:
-            return { ...state, user: null }
+            return { ...state, user: null, isAuthed: false}
         default:
             return state;
     }

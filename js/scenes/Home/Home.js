@@ -5,14 +5,14 @@ import { goToRoute } from "../../lib/navigationHelpers";
 
 import styles from "./styles";
 
-const Home = ({  }) => (
+const Home = ({ fullname }) => (
   <View style={styles.homeWrapper}>
     <View style={styles.headerWrapper}>
       <Image source={require("../../assets/images/home-nav-bar.png")} />
     </View>
 
     <View style={styles.headerTextWrapper}>
-      <Text style={styles.headerText}>Hello, {this.fullname}!</Text>
+      <Text style={styles.headerText}>Hello, {fullname}!</Text>
     </View>
 
     <TouchableOpacity

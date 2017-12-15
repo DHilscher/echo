@@ -50,6 +50,14 @@ const styles = StyleSheet.create({
         width: '100%',
         borderColor: '#D4D4D4',
         borderBottomWidth: 1,
+    },
+    settingsContainerStyle: {
+        height: 45,
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        width: '50%',
+        borderColor: '#D4D4D4',
+        borderBottomWidth: 1,
     }
 })
 

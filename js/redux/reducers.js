@@ -10,6 +10,7 @@ import projectReducer from './modules/projectReducer'
 import writtenAnswerReducer from './modules/writtenAnswerReducer'
 import scaleAnswerReducer from './modules/scaleAnswerReducer'
 import multipleChoiceReducer from './modules/multipleChoiceReducer'
+import firebaseReducer from './modules/firebase'
 
 export default combineReducers({
   navigation: NavigationReducer,
@@ -17,10 +18,11 @@ export default combineReducers({
   project: ProjectNav,
   signup: signUpReducer,
   auth: authReducer,
+  fbuser: firebaseReducer,
   answerReducer,
   projectReducer,
   writtenAnswerReducer,
   scaleAnswerReducer,
-  multipleChoiceReducer
+  multipleChoiceReducer,
 
 });
