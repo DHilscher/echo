@@ -11,16 +11,17 @@ import CustomSingleTextField from "../CustomTextField/CustomSingleTextField";
 
 class Register2 extends Component {
 
-    handleNameChange = (value) => {
-        this.props.dispatch(fullname(value))
-    }
-    render() {
-  return (
-    <View style={styles.registerContainer}>
-      <Image
-        style={styles.image}
-        source={require("../../assets/images/registration/registration-2.png")}
-      />
+  handleNameChange = (value) => {
+      this.props.dispatch(fullname(value))
+  }
+
+  render() {
+    return (
+      <View style={styles.registerContainer}>
+        <Image
+          style={styles.image}
+          source={require("../../assets/images/registration/registration-2.png")}
+        />
 
         <View style={styles.stepIndicatorWrapper}>
           <TopStepIndicator stepCount={3} currentPosition={0}/>
@@ -29,7 +30,7 @@ class Register2 extends Component {
         <View style={styles.registerContentContainer}>
           <View style={styles.contentQuestionWrapper}>
             <Text style={styles.registerExplainText}>Tell us more about yourself?</Text>
-            <CustomSingleTextField placeholder="Your first name & last name" onChangeText={(text) => this.handleNameChange(text)}/>
+            <CustomSingleTextField placeholder="Your first name & last name" handler={(text) => this.handleNameChange(text)}/>
           </View>
 
           <View style={styles.arrowButtonWrapper}>
@@ -43,15 +44,15 @@ class Register2 extends Component {
           </TouchableOpacity>
         </View>
 
-    </View>
-  );
-}
+      </View>
+    );
+  }
 };
 
 const mapStateToProps = state => {
-    return {
-       fullname: state.signup.fullname 
-    }
+  return {
+    fullname: state.signup.fullname
+  }
 }
 
 export default connect(mapStateToProps)(Register2)

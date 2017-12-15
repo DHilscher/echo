@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import { colors } from '../../../config/styles';
 
-const SingleTextField = ({ placeholder, handler }) => (
+const SingleTextField = ({ placeholder, onChangeText, handler }) => (
   <View style={styles.textFieldWrapper}>
     <TextInput 
       placeholder={placeholder} 
@@ -15,7 +15,9 @@ const SingleTextField = ({ placeholder, handler }) => (
       autoCorrect={false}
       style={styles.textFieldText} 
       secureTextEntry={ placeholder === "password" ? true : false } 
-      onChangeText={(text) => handler(text)} />
+      onChangeText={(text) => handler(text)}
+      /*onChangeText={onChangeText}*/
+    />
   </View>
 );
 
