@@ -1,30 +1,42 @@
-import React, { Component } from "react";
-import StepIndicator from "react-native-step-indicator";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
-import { goToRoute } from "../../lib/navigationHelpers";
+import React from "react";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 
-import CustomButton from "../Buttons/CustomButton";
-import { indicatorStyles, styles } from "./styles";
+import { styles } from "./styles";
+import { colors } from "../../config/styles";
+import { goToRoute } from "../../lib/navigationHelpers";
+import ArrowButton from "../Buttons/ArrowButton";
+import TopStepIndicator from "../TopStepIndicator";
+import CustomSingleTextField from "../CustomTextField/CustomSingleTextField";
 
 const Register2 = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.registerContainer}>
       <Image
         style={styles.image}
         source={require("../../assets/images/registration/registration-2.png")}
       />
-      <View>
-        <View>
-          <Text>Tell us more about yourself?</Text>
+
+        <View style={styles.stepIndicatorWrapper}>
+          <TopStepIndicator stepCount={3} currentPosition={0}/>
         </View>
-        <View>
-          <TextInput editable={true} maxLength={30} />
-          <Text>Your first & last name</Text>
+
+        <View style={styles.registerContentContainer}>
+          <View style={styles.contentQuestionWrapper}>
+            <Text style={styles.registerExplainText}>Tell us more about yourself?</Text>
+            <CustomSingleTextField placeholder="Your first name & last name"/>
+          </View>
+
+          <View style={styles.arrowButtonWrapper}>
+            <TouchableOpacity onPress={() => goToRoute("register3")}>
+              <ArrowButton color={colors.red} />
+            </TouchableOpacity>
+          </View>
+
+          <TouchableOpacity onPress={() => goToRoute("login")}>
+            <Text style={styles.loginText}>Login</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={() => goToRoute("register3")}>
-          <CustomButton btnText={">"} />
-        </TouchableOpacity>
-      </View>
+
     </View>
   );
 };

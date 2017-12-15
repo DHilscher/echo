@@ -9,9 +9,10 @@ const SingleTextField = ({ placeholder }) => (
   <View style={styles.textFieldWrapper}>
     <TextInput 
       placeholder={placeholder} 
-      placeholderTextColor={colors.lightestGreen}
+      placeholderTextColor={colors.mainGreen}
       selectionColor={colors.yellow}
-      autoCapitalize = "none"
+      autoCapitalize="none"
+      autoCorrect={false}
       style={styles.textFieldText} 
       secureTextEntry={ placeholder === "password" ? true : false } />
   </View>

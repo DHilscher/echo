@@ -7,13 +7,13 @@ const styles = StyleSheet.create({
     margin: margins.marginM,
   },
   textFieldText: {
-    fontFamily: typography.fontBlack,
+    fontFamily: typography.fontHeavy,
     fontSize: textSizes.bodyL,
     textAlign: 'center',
     color: colors.darkGreen,
     marginBottom: margins.marginS,
     height: 40,
-    borderColor: "white",
+    borderColor: 'white',
     borderBottomWidth: 3,
   },
   hintText: {
