@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { colors, margins } from '../../config/styles';
+import { colors, margins, textSizes, typography } from '../../config/styles';
 
 export default StyleSheet.create({
   feedbackContainer:{
@@ -8,19 +8,33 @@ export default StyleSheet.create({
     backgroundColor: colors.mainGreen
   },
 
-  logoContainer:{
-    height: 100,
+  surveytitlecontainer:{
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white'
+    backgroundColor: colors.darkGreen
   },
 
-  feedbacktitle:{
+  scenetitle:{
+    color: 'white',
+    fontSize: textSizes.title2,
+    fontFamily: typography.fontBlack
+  },
+
+  surveyTitle:{
+    color: 'white',
+    fontSize: textSizes.bodyL,
+    fontFamily: typography.fontHeavy,
+    paddingHorizontal: 80,
+    textAlign: 'center'
+  },
+
+  feedbacktitlecontainer:{
     height: 60,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.darkGreen,
-    // marginBottom: margins.marginS
+    marginBottom: margins.marginS
   },
 
   feedbackQuestion:{
@@ -31,32 +45,32 @@ export default StyleSheet.create({
   },
 
   feedbackOptions:{
-    height: 100,
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#FFFFFF80'
+  },
+
+  feedbackTitle:{
+    color: 'white',
+    fontSize: textSizes.title3,
+    fontFamily: typography.fontBlack
   },
 
   feedbackOptionDivider:{
-    height: 2,
+    height: 2.5,
     backgroundColor: 'white'
   },
 
-  feedbackOptions2:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor:'#FFFFFF80'
+  nextbutton:{
+    position: 'absolute',
+    alignSelf: 'center',
+    bottom: 40
   },
 
-  feedbackOptions3:{
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#FFFFFF80'
-  },
-
-  surveyTitle:{
-    color: 'white'
+  addbutton:{
+    position: 'absolute',
+    right: 30,
+    bottom: 100
   }
 })
