@@ -14,10 +14,13 @@ class CreateFormContainer extends Component {
       }
     }
   };
+  handleInputChange(text){
+    // console.log(text);
+  }
   render() {
     return (
       <View>
-        <CreateForm />
+        <CreateForm handleInputChange={this.handleInputChange} />
       </View>
     );
   }

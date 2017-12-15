@@ -5,19 +5,21 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import { colors } from '../../../config/styles';
 
-const CustomTextArea = ({ placeholder }) => (
+const CustomTextArea = ({ placeholder, defaultValue }) => (
   <View style={styles.textAreaWrapper}>
     <TextInput 
       placeholder={placeholder}
-      placeholderTextColor={colors.lightestGreen}
+      placeholderTextColor={colors.mainGreen}
       selectionColor={colors.yellow} 
       multiline={true}
+      defaultValue={defaultValue}
       style={styles.textAreaText} />
   </View>
 );
 
 CustomTextArea.propTypes = {
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 export default CustomTextArea;

@@ -7,7 +7,28 @@ import { goToRoute } from "../../lib/navigationHelpers";
 
 import styles from "./styles";
 
-const Login = ({ handleSubmit, email, password }) => {
+const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.loginHeaderWrapper}>
+        <Image source={require("../../assets/images/login/login-items.png")} />
+        <Image
+          source={require("../../assets/images/echo-logo-white.png")}
+          style={styles.logoImage}
+        />
+      </View>
+
+      <View style={styles.loginContentWrapper}>
+        <CustomSingleTextField placeholder="email" />
+        <CustomSingleTextField placeholder="password" />
+
+        <TouchableOpacity
+          onPress={() => goToRoute("home")}
+          style={styles.logInButton}
+        >
+          <CustomButton btnText="Log In" />
+        </TouchableOpacity>
+      </View>
 
     return (
       <View style={styles.container}>

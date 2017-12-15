@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
 import { colors } from '../../../config/styles';
 
 const SingleTextField = ({ placeholder, handler }) => (
-  <View>
+  <View style={styles.textFieldWrapper}>
     <TextInput 
       placeholder={placeholder} 
       placeholderTextColor={colors.mainGreen}
@@ -20,7 +20,7 @@ const SingleTextField = ({ placeholder, handler }) => (
 );
 
 SingleTextField.propTypes = {
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default SingleTextField;

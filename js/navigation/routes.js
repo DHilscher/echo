@@ -19,6 +19,8 @@ import {
   RegisterP4,
   RegisterP5
 } from "../components/Register";
+import SendForm from "../scenes/SendForm";
+import SendFormEmail from "../scenes/SendForm/SendEmail";
 import WrittenAnswer from "../components/WrittenAnswer"
 import MultipleChoice from "../components/MultipleChoice"
 import MultipleChoiceAnswer from "../components/MultipleChoice/MultipleChoiceAnswer"
@@ -40,6 +42,8 @@ const Router = createRouter(() => ({
   register3: () => RegisterP3,
   register4: () => RegisterP4,
   register5: () => RegisterP5,
+  sendForm: () => SendForm,
+  sendFormEmail: () => SendFormEmail,
   survey: () => Survey,
   surveyCollection: () => SurveyCollection,
   writtenAnswer: () => WrittenAnswer,
