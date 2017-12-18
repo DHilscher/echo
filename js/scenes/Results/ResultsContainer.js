@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, ScrollView } from "react-native";
 
 import Results from "./Results";
 import styles from "./styles";
+import NavigationBar from "../../components/NavigationBar";
 
 class ResultsContainer extends Component {
   constructor() {
@@ -29,11 +30,7 @@ class ResultsContainer extends Component {
   render() {
     return (
       <ScrollView style={styles.resultContainer}>
-        <View style={styles.headerNavBarWrapper}>
-         <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-       </View>
-
-       <View style={styles.titlecontainer}><Text style={styles.scenetitle}>Results</Text></View>
+        <NavigationBar pageTitle="Results"/>
 
         <View style={styles.resultSearch}>
           <TextInput style={styles.searchBar} />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
 import styles from "./styles";
@@ -9,7 +9,8 @@ import CustomButton from "../../components/Buttons/CustomButton";
 import NavigationBar from "../../components/NavigationBar";
 import CustomSingleTextField from "../../components/CustomTextField/CustomSingleTextField";
 
-class ProjectBasedFeedback extends Component {
+class SendEmail extends Component {
+
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
@@ -21,9 +22,25 @@ class ProjectBasedFeedback extends Component {
     }
   };
 
+  constructor() {
+    super();
+    this.state = {
+      customMessage: false,
+    };
+  }
+
+  handleCustomMessage = () => {
+    if (this.state.customMessage === true) {
+      this.setState({ customMessage: false });
+    } else {
+      this.setState({ customMessage: true });
+    }
+  };
+
   render() {
+    console.log(this.state.customMessage)
     return (
-      <View style={styles.sendFormContainer}>
+      <ScrollView style={styles.sendFormContainer}>
         <NavigationBar pageTitle="Send Form" />
 
         <View style={styles.sentRecipientWrapper}>
@@ -46,40 +63,42 @@ class ProjectBasedFeedback extends Component {
           <View style={styles.optionsContainer}>
 
             <View style={styles.optionWrapper}>
-              <TouchableOpacity activeOpacity={0.7}>
-                <View style={styles.optionContentWrapper}>
+              <View style={styles.optionContentWrapper}>
+                <TouchableOpacity activeOpacity={0.7} onPress={() => this.handleCustomMessage()}>
                   <Icon
-                    name="ios-checkbox-outline"
+                    name={
+                      this.state.customMessage === false ? ("ios-square-outline") : ("ios-checkbox-outline")
+                    }
                     size={44}
                     color="white"
                   />
-                  <Text style={styles.optionText}>Customize recipient message</Text>
-                </View>
-              </TouchableOpacity>
+                </TouchableOpacity>
+                <Text style={styles.optionText}>Customize recipient message</Text>
+              </View>
             </View>
 
             <View style={styles.optionWrapper}>
-              <TouchableOpacity activeOpacity={0.7}>
-                <View style={styles.optionContentWrapper}>
+              <View style={styles.optionContentWrapper}>
+                <TouchableOpacity activeOpacity={0.7}>
                   <Icon
                     name="ios-add-circle-outline"
                     size={44}
                     color="white"
                   />
-                  <Text style={styles.optionText}>Add another recipient</Text>
-                </View>
-            </TouchableOpacity>
+                </TouchableOpacity>
+                <Text style={styles.optionText}>Add another recipient</Text>
+              </View>
             </View>
           </View>
         </View>
         
-        <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendForm")}>
+        <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendMessage")}>
           <CustomButton btnText={'Send'} />
         </TouchableOpacity>
         
-      </View>
+      </ScrollView>
     );
   }
 }
 
-export default ProjectBasedFeedback;
+export default SendEmail;

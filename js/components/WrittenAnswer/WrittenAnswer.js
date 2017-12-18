@@ -3,12 +3,24 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import CustomButton from '../Buttons/CustomButton'
+import CustomButton from '../Buttons/CustomButton';
+import NavigationBar from '../NavigationBar';
 import { goToRoute } from "../../lib/navigationHelpers";
 import { writtenAnswer } from '../../redux/modules/writtenAnswerReducer'
 import { connect } from "react-redux";
 
 class WrittenAnswer extends Component {
+
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
 
   handleWrittenQuestion = (value) => {
     this.props.dispatch(writtenAnswer(value))
@@ -18,11 +30,8 @@ class WrittenAnswer extends Component {
     return (
 
       <View style={styles.writtenContainer}>
-        <View style={styles.headerNavBarWrapper}>
-          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-        </View>
+        <NavigationBar pageTitle="End of Proj. Eval"/>
 
-        <View style={styles.writtentitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
         <Text style={styles.writteninstruction}>Please enter question and be detailed!</Text>
         <TextInput multiline={true} editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleWrittenQuestion(text)}/>
         <TouchableOpacity onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7}>

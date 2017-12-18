@@ -3,12 +3,24 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import CustomButton from '../Buttons/CustomButton'
-import { goToRoute } from "../../lib/navigationHelpers"
-import { scaleQuestion } from '../../redux/modules/scaleAnswerReducer'
+import CustomButton from '../Buttons/CustomButton';
+import NavigationBar from '../NavigationBar';
+import { goToRoute } from "../../lib/navigationHelpers";
+import { scaleQuestion } from '../../redux/modules/scaleAnswerReducer';
 import { connect } from "react-redux"
 
 class Scale extends Component {
+
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
 
   handleScaleQuestion = (value) => {
     this.props.dispatch(scaleQuestion(value))
@@ -18,11 +30,7 @@ class Scale extends Component {
     return (
 
       <View style={styles.scaleContainer}>
-        <View style={styles.headerNavBarWrapper}>
-          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-        </View>
-
-        <View style={styles.scaletitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
+        <NavigationBar pageTitle="End of Proj. Eval"/>
 
         <Text style={styles.scaleinstruction}>Please enter question and be detailed!</Text>
 

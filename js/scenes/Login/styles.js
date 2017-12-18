@@ -4,7 +4,8 @@ import { colors, typography, textSizes, margins } from '../../config/styles';
 
 export default StyleSheet.create({
   container: {
-    height: "100%",
+    // height: "100%",
+    // flex: 1,
     backgroundColor: colors.backgroundLightGreen,
     paddingBottom: margins.marginL,
   },

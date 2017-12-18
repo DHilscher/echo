@@ -98,6 +98,7 @@ class Register4 extends Component {
                         <Text style={styles.loginText}>Login</Text>
                     </TouchableOpacity>
                 </View>
+                
             </View>
         );
     }

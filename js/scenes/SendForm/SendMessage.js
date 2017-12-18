@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
+import { Text, View, TextInput, TouchableOpacity, ScrollView } from "react-native";
 
 import styles from "./styles";
 import { goToRoute } from "../../lib/navigationHelpers";
@@ -8,9 +8,9 @@ import CustomTextArea from "../../components/CustomTextField/CustomTextArea";
 import NavigationBar from "../../components/NavigationBar";
 
 
-const SendForm = () => {
+const SendMessage = () => {
   return (
-    <View style={styles.sendFormContainer}>
+    <ScrollView style={styles.sendFormContainer}>
 
       <NavigationBar pageTitle="Send Form"/>
 
@@ -27,14 +27,14 @@ const SendForm = () => {
           so I can keep growing. Thanks so much for your time." 
           />
 
-          <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendFormEmail")}>
+          <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendEmail")}>
             <CustomButton btnText={'Next'} />
           </TouchableOpacity>
 
       </View>
       
-    </View>
+    </ScrollView>
   );
 };
 
-export default SendForm;
+export default SendMessage;
