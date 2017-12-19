@@ -26,7 +26,7 @@ export default StyleSheet.create({
     fontSize: textSizes.bodyL,
     fontFamily: typography.fontBlack,
     margin: margins.marginL,
-    marginHorizontal: 80,
+    marginHorizontal: 40,
     textAlign: 'center'
   },
 

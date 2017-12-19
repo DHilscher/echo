@@ -26,10 +26,11 @@ class MultipleChoice extends Component {
   }
 
   render() { 
-    return (
+    const { formTitle } = this.props;
 
+    return (
       <View style={styles.multipleContainer}>
-        <NavigationBar pageTitle="End of Proj. Eval"/>
+        <NavigationBar pageTitle={formTitle} />
 
         <Text style={styles.multipleinstruction}>Please enter question and be detailed!</Text>
 
@@ -49,7 +50,8 @@ class MultipleChoice extends Component {
 
 const mapStatetoProps = state => {
   return {
-    multipleQuestion: state.multipleChoiceReducer.multipleChoice
+    multipleQuestion: state.multipleChoiceReducer.multipleChoice,
+    formTitle: state.formTitleReducer.formTitle,
   }
 }
 
