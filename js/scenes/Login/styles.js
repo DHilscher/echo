@@ -4,12 +4,12 @@ import { colors, typography, textSizes, margins } from '../../config/styles';
 
 export default StyleSheet.create({
   container: {
-    // height: "100%",
-    // flex: 1,
+    flex: 1,
     backgroundColor: colors.backgroundLightGreen,
     paddingBottom: margins.marginL,
   },
   loginHeaderWrapper: {
+    flex: 6,
     alignItems: "center",
   },
   logoImage: {
@@ -17,14 +17,16 @@ export default StyleSheet.create({
     marginBottom: margins.marginL,
   },
   loginContentWrapper: {
+    flex: 4,
     paddingHorizontal: margins.marginL + margins.marginL,
   },
   logInButton: {
     marginTop: margins.marginL,
   },
   bottomWrapper: {
-    position: "absolute",
-    bottom: 0,
+    // position: "absolute",
+    // bottom: 0,
+    flex: 0.1,
     margin: margins.marginL,
   },
   textButton: {

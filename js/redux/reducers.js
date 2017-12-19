@@ -12,6 +12,7 @@ import scaleAnswerReducer from './modules/scaleAnswerReducer';
 import multipleChoiceReducer from './modules/multipleChoiceReducer';
 import formTitleReducer from './modules/formTitle';
 import projectListReducer from './modules/projectList';
+import sendFormReducer from './modules/sendForm';
 
 export default combineReducers({
   navigation: NavigationReducer,
@@ -26,4 +27,5 @@ export default combineReducers({
   multipleChoiceReducer,
   formTitleReducer,
   projectListReducer,
+  sendFormReducer
 });

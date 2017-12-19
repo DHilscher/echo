@@ -4,12 +4,14 @@ import { connect } from "react-redux";
 import { getFullname, getEmail} from '../../redux/modules/firebase'
 import store from '../../redux/store'
 import Setting from "./Settings";
+import { colors } from '../../config/styles';
 
 
 class SettingsContainer extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity, Image } from "react-native";
+import { Text, View, TextInput, TouchableOpacity, Image, ScrollView } from "react-native";
 
 import CustomButton from "../Buttons/CustomButton";
 import CustomFeedbackButton from "../Buttons/CustomFeedbackButton";
@@ -10,7 +10,7 @@ import styles from "./styles";
 
 const SuccessPage = ({ successText, pageTitle }) => {
   return (
-    <View>
+    <ScrollView>
       <NavigationBar pageTitle={pageTitle} />
       <View style={styles.container}>
         <Image
@@ -31,7 +31,7 @@ const SuccessPage = ({ successText, pageTitle }) => {
           <CustomFeedbackButton btnText="Ask Feedback" />
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

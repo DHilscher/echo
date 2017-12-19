@@ -8,12 +8,11 @@ import CustomSingleTextField from "../../components/CustomTextField/CustomSingle
 
 const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.loginHeaderWrapper}>
-        <Image source={require("../../assets/images/login/login-items.png")} />
+        <Image source={require("../../assets/images/login/login-items.png")}/>
         <Image
           source={require("../../assets/images/echo-logo-white.png")}
-          style={styles.logoImage}
         />
       </View>
 
@@ -34,7 +33,7 @@ const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
             <Text style={styles.textButton}>Register</Text>
           </TouchableOpacity>
         </View>
-      </ScrollView>
+      </View>
     );
 };
 

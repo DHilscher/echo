@@ -56,7 +56,7 @@ export default StyleSheet.create({
   },
   sentRecipientText: {
     color: colors.red,
-    fontSize: textSizes.bodyL,
+    fontSize: textSizes.body,
     fontFamily: typography.fontMedium,
   }
 });

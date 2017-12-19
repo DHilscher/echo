@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import styles from "./styles";
+import { colors } from "../../config/styles";
 import { goToRouteWithProps } from "../../lib/navigationHelpers";
 import NavigationBar from "../../components/NavigationBar";
 
@@ -16,6 +17,7 @@ class SingleResults extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {
