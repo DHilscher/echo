@@ -25,7 +25,7 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: textSizes.bodyL,
     fontFamily: typography.fontHeavy,
-    paddingHorizontal: 80,
+    paddingHorizontal: 40,
     textAlign: 'center'
   },
 

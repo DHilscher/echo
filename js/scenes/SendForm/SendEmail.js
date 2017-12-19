@@ -92,7 +92,7 @@ class SendEmail extends Component {
           </View>
         </View>
         
-        <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendMessage")}>
+        <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("formSent")}>
           <CustomButton btnText={'Send'} />
         </TouchableOpacity>
         

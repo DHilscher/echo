@@ -27,10 +27,11 @@ class WrittenAnswer extends Component {
   }
 
   render() {
-    return (
+    const { formTitle } = this.props;
 
+    return (
       <View style={styles.writtenContainer}>
-        <NavigationBar pageTitle="End of Proj. Eval"/>
+        <NavigationBar pageTitle={formTitle} />
 
         <Text style={styles.writteninstruction}>Please enter question and be detailed!</Text>
         <TextInput multiline={true} editable={true} style={styles.textInputStyle} onChangeText={(text) => this.handleWrittenQuestion(text)}/>
@@ -38,15 +39,15 @@ class WrittenAnswer extends Component {
           <CustomButton btnText={'Add'} />
         </TouchableOpacity>
         <Image style={styles.target} source={require ('../../assets/images/icon-target.png')}/>
-      </View>
-      
+      </View>   
     )
   }
 }
 
 const mapStatetoProps = state => {
   return {
-    writtenQuestion: state.writtenAnswerReducer.writtenAnswer
+    writtenQuestion: state.writtenAnswerReducer.writtenAnswer,
+    formTitle: state.formTitleReducer.formTitle,
   }
 }
 

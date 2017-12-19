@@ -24,10 +24,11 @@ import {
 } from "../components/Register";
 import SendMessage from "../scenes/SendForm";
 import SendEmail from "../scenes/SendForm/SendEmail";
-import WrittenAnswer from "../components/WrittenAnswer"
-import MultipleChoice from "../components/MultipleChoice"
-import MultipleChoiceAnswer from "../components/MultipleChoice/MultipleChoiceAnswer"
-import Scale from "../components/Scale"
+import WrittenAnswer from "../components/WrittenAnswer";
+import MultipleChoice from "../components/MultipleChoice";
+import MultipleChoiceAnswer from "../components/MultipleChoice/MultipleChoiceAnswer";
+import Scale from "../components/Scale";
+import FormSent from "../components/FormSent";
 
 const Router = createRouter(() => ({
   feedback: () => Feedback,
@@ -55,7 +56,8 @@ const Router = createRouter(() => ({
   scale: () => Scale,
   answer: () => SurveyAnswer,
   singleResult: () => SingleResult,
-  singleEval: () => SingleEval
+  singleEval: () => SingleEval,
+  formSent: () => FormSent,
 }));
 
 export default Router;

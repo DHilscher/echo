@@ -6,9 +6,10 @@ import PropTypes from 'prop-types'
 import CustomButton from '../../components/Buttons/CustomButton'
 
 import { goToRoute } from "../../lib/navigationHelpers";
-import SurveyQuestion from '../../components/SurveyQuestion'
+import SurveyQuestion from "../../components/SurveyQuestion";
 import { connect } from "react-redux";
-import AddButton from '../../components/Buttons/AddButton'
+import AddButton from "../../components/Buttons/AddButton";
+import NavigationBar from "../../components/NavigationBar";
 
 const question = 'How was sjgjsdkgjdshglsd'
 
@@ -26,7 +27,7 @@ class SurveyCollection extends Component {
   };
 
   render() {
-    const {multipleQuestion, writtenQuestion, scaleQuestion} = this.props
+    const {multipleQuestion, writtenQuestion, scaleQuestion, formTitle} = this.props
     let collection = []
 
     if(writtenQuestion){
@@ -44,7 +45,7 @@ class SurveyCollection extends Component {
 
     return (
       <View style={styles.feedbackContainer}>
-        <NavigationBar pageTitle="End of Proj. Eval"/>
+        <NavigationBar pageTitle={formTitle}/>
 
       {collection.map((survey, index) => (
         <SurveyQuestion key={survey.question} surveyQuestion={survey.question.length > 10 ? `${survey.question.slice(0, 15)}...` : survey.question} surveyType={survey.type} surveyNum={index+1} />
@@ -66,8 +67,8 @@ const mapStateToProps = state => {
   return {
     multipleQuestion: state.multipleChoiceReducer.multipleChoice,
     writtenQuestion: state.writtenAnswerReducer.writtenAnswer,
-    scaleQuestion: state.scaleAnswerReducer.scaleQuestion
-    
+    scaleQuestion: state.scaleAnswerReducer.scaleQuestion,
+    formTitle: state.formTitleReducer.formTitle,
   }
 }
 
