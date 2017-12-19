@@ -34,7 +34,6 @@ export default StyleSheet.create({
   successText: {
     fontSize: 24,
     color: "white",
-    marginHorizontal: "16.5%",
     textAlign: "center",
     fontFamily: typography.fontHeavy,
     marginBottom: "10%"

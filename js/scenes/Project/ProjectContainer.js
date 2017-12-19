@@ -4,7 +4,6 @@ import Project from "./Project";
 import { connect } from "react-redux";
 import { goToRoute } from "../../lib/navigationHelpers";
 
-import { nextProjectPage } from "../../redux/modules/project";
 import { projectTitle } from "../../redux/modules/projectReducer";
 import { projectDesc } from "../../redux/modules/projectReducer";
 import { addProject } from "../../config/models";
@@ -73,7 +72,6 @@ class ProjectContainer extends Component {
 const mapStateToProps = state => {
   return {
     currentNavigatorUID: state.navigation.currentNavigatorUID,
-    projectPage: state.project.projectPage,
     projectTitle: state.projectReducer.projectTitle,
     projectDesc: state.projectReducer.projectDesc
   };

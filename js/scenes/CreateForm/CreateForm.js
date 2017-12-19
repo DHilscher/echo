@@ -7,7 +7,7 @@ import { goToRoute } from "../../lib/navigationHelpers";
 import AddButton from "../../components/Buttons/AddButton";
 import { colors } from "../../config/styles";
 
-const CreateFormStep1 = ({handleInputChange}) => {
+const CreateFormStep1 = ({handleFormTitle}) => {
   return (
     <View style={styles.feedbackContainer}>
       <View style={styles.headerNavBarWrapper}>
@@ -23,7 +23,8 @@ const CreateFormStep1 = ({handleInputChange}) => {
           selectionColor={colors.yellow}
           clearButtonMode="while-editing"
           autoFocus={true}
-          onChangeText={(text) => handleInputChange(text)}
+          autoCorrect={false}
+          onChangeText={(text) => handleFormTitle(text)}
           style={styles.textFieldText} />
       </View>
 

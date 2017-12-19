@@ -10,10 +10,10 @@ import MultipleChoiceAnswer from '../../components/MultipleChoice/MultipleChoice
 import Scale from '../../components/Scale';
 import { goToRoute } from "../../lib/navigationHelpers";
 
-const Survey = ({}) => {
+const Survey = ({ formTitle }) => {
   return (
     <View style={styles.feedbackContainer}>
-      <NavigationBar pageTitle="End of Proj. Eval"/>
+      <NavigationBar pageTitle={formTitle}/>
 
       <View style={styles.feedbackQuestion}><Text style={styles.surveyTitle}>What type of question do you want to ask?</Text></View>
       

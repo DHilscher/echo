@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 import SuccessPage from "../../components/SuccessPage";
-import styles from "./styles";
+// import styles from "./styles";
 
-class ProjectAdded extends Component {
+class FormSent extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
@@ -17,11 +17,11 @@ class ProjectAdded extends Component {
   render() {
     return (
       <SuccessPage
-        pageTitle="NewProject"
-        successText="Your project has been added!"
+        pageTitle="Send Form"
+        successText="Your request has been sent! Look forward to the feedback!"
       />
     );
   }
 }
 
-export default ProjectAdded;
+export default FormSent;

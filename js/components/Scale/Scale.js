@@ -27,10 +27,10 @@ class Scale extends Component {
   }
 
   render() {
+    const { formTitle } = this.props;
     return (
-
       <View style={styles.scaleContainer}>
-        <NavigationBar pageTitle="End of Proj. Eval"/>
+        <NavigationBar pageTitle={formTitle} />
 
         <Text style={styles.scaleinstruction}>Please enter question and be detailed!</Text>
 
@@ -43,14 +43,14 @@ class Scale extends Component {
         </TouchableOpacity>
 
       </View>
-
     )
   }
 }
 
 const mapStatetoProps = state => {
   return {
-    scaleQuestion: state.scaleAnswerReducer.scaleQuestion
+    scaleQuestion: state.scaleAnswerReducer.scaleQuestion,
+    formTitle: state.formTitleReducer.formTitle,
   }
 }
 
