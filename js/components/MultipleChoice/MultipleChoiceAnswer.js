@@ -3,12 +3,24 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import CustomButton from '../Buttons/CustomButton'
+import CustomButton from '../Buttons/CustomButton';
+import NavigationBar from '../NavigationBar';
 import { goToRoute } from "../../lib/navigationHelpers";
 import { multipleChoiceAnswersA, multipleChoiceAnswersB, multipleChoiceAnswersC, multipleChoiceAnswersD } from '../../redux/modules/multipleChoiceReducer'
 import { connect } from "react-redux";
 
 class MultipleChoiceAnswer extends Component {
+
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
 
   handleAnswerA = (value) => {
     this.props.dispatch(multipleChoiceAnswersA(value))
@@ -30,11 +42,7 @@ class MultipleChoiceAnswer extends Component {
     return (
 
       <View style={styles.multipleContainer}>
-        <View style={styles.headerNavBarWrapper}>
-          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-        </View>
-
-        <View style={styles.multipletitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
+        <NavigationBar pageTitle="End of Proj. Eval"/>
 
         <Text style={styles.multipleinstruction}>Please enter your choices.</Text>
     

@@ -28,6 +28,7 @@ class Register2 extends Component {
         </View>
 
         <View style={styles.registerContentContainer}>
+
           <View style={styles.contentQuestionWrapper}>
             <Text style={styles.registerExplainText}>Tell us more about yourself?</Text>
             <CustomSingleTextField placeholder="Your first name & last name" handler={(text) => this.handleNameChange(text)}/>
@@ -42,6 +43,7 @@ class Register2 extends Component {
           <TouchableOpacity onPress={() => goToRoute("login")}>
             <Text style={styles.loginText}>Login</Text>
           </TouchableOpacity>
+            
         </View>
 
       </View>

@@ -14,6 +14,17 @@ const question = 'How was sjgjsdkgjdshglsd'
 
 class SurveyCollection extends Component {
 
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
+
   render() {
     const {multipleQuestion, writtenQuestion, scaleQuestion} = this.props
     let collection = []
@@ -33,11 +44,7 @@ class SurveyCollection extends Component {
 
     return (
       <View style={styles.feedbackContainer}>
-        <View style={styles.headerNavBarWrapper}>
-          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-        </View>
-
-        <View style={styles.feedbacktitlecontainer}><Text style={styles.scenetitle}>End of Proj. Eval</Text></View>
+        <NavigationBar pageTitle="End of Proj. Eval"/>
 
       {collection.map((survey, index) => (
         <SurveyQuestion key={survey.question} surveyQuestion={survey.question.length > 10 ? `${survey.question.slice(0, 15)}...` : survey.question} surveyType={survey.type} surveyNum={index+1} />
@@ -47,7 +54,7 @@ class SurveyCollection extends Component {
         <AddButton />
       </TouchableOpacity>
   
-      <TouchableOpacity onPress={() => goToRoute("surveyCollection")} activeOpacity={0.7} style={styles.nextbutton}>
+      <TouchableOpacity onPress={() => goToRoute("sendMessage")} activeOpacity={0.7} style={styles.nextbutton}>
         <CustomButton btnText={'Next'} />
       </TouchableOpacity>
       </View>

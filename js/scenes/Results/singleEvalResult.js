@@ -9,8 +9,20 @@ import {
 
 import styles from "./styles";
 import { goToRouteWithProps } from "../../lib/navigationHelpers";
+import NavigationBar from "../../components/NavigationBar";
 
 class SingleResults extends Component {
+
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
   
   render() {
 
@@ -21,11 +33,7 @@ class SingleResults extends Component {
     return (
       <View>
 
-        <View style={styles.headerNavBarWrapper}>
-          <Image style={styles.headerNavBar} source={require ('../../assets/images/main-nav-bar.png')}/>
-        </View>
-
-        <View style={styles.titlecontainer}><Text style={styles.scenetitle}>Results</Text></View>
+        <NavigationBar pageTitle="Results"/>
 
         <View style={styles.resultSearch}>
           <TextInput style={styles.searchBar} />

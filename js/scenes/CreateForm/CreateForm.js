@@ -3,6 +3,7 @@ import { Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
+import { goToRoute } from "../../lib/navigationHelpers";
 import AddButton from "../../components/Buttons/AddButton";
 import { colors } from "../../config/styles";
 
@@ -40,7 +41,7 @@ const CreateFormStep1 = ({handleInputChange}) => {
           <View style={styles.mainGreenView}></View>
           <View style={styles.lightGreenView}></View>
         </View>
-        <TouchableOpacity activeOpacity={0.7}>
+        <TouchableOpacity onPress={() => goToRoute("survey")} activeOpacity={0.7}>
           <View style={styles.addButtonWrapper}>
             <AddButton />
           </View>

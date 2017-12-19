@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, TextInput, TouchableOpacity, Image } from "react-native";
+import { Text, View, TextInput, TouchableOpacity, Image, ScrollView } from "react-native";
 
 import styles from "./styles";
 import { goToRoute } from "../../lib/navigationHelpers";
@@ -8,7 +8,7 @@ import CustomSingleTextField from "../../components/CustomTextField/CustomSingle
 
 const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.loginHeaderWrapper}>
         <Image source={require("../../assets/images/login/login-items.png")} />
         <Image
@@ -34,7 +34,7 @@ const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
             <Text style={styles.textButton}>Register</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     );
 };
 

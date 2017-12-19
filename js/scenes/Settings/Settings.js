@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity, Switch } from 'react-native';
+import { Text, View, Image, TouchableOpacity, Switch, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -9,7 +9,7 @@ import NavigationBar from "../../components/NavigationBar";
 
 const Setting = ({}) => {
   return (
-    <View style={styles.settingContainer}>
+    <ScrollView style={styles.settingContainer}>
       <NavigationBar pageTitle="Settings"/>
       
       <View style={[styles.settingSection, styles.userInformationSection]}>
@@ -50,7 +50,7 @@ const Setting = ({}) => {
         </View>
       </View>
 
-    </View>
+    </ScrollView>
   )
 }
 
