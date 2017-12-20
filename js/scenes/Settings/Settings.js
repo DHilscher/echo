@@ -23,7 +23,8 @@ class Setting extends Component {
       email: '',
       password: '',
       newEmail: '',
-      newName: ''
+      newName: '',
+      error: ''
     }
   }
 
@@ -42,6 +43,7 @@ class Setting extends Component {
     const { newName } = this.state
     let ref = firebase.database().ref(`users/${user.uid}`)
       
+    if(newName.length > 0)
       ref.update({
         fullname: newName
       }).then(function () {
@@ -66,6 +68,9 @@ class Setting extends Component {
             })).then(function () {
               _updateEmail();
             })
+        .catch(() => {
+          this.setState({ error: "Your update failed. Please try again."});
+      })
   }
 
   _updatePassword = () => {
