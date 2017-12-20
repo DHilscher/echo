@@ -4,7 +4,8 @@ import { NavigationReducer } from "@expo/ex-navigation";
 import RegisterReducer from './modules/register';
 import signUpReducer from './modules/signup';
 import authReducer from './modules/authentication';
-import answerReducer from "./modules/answer"
+import answerReducer from "./modules/answer";
+import firebaseReducer from './modules/firebase';
 import projectReducer from './modules/projectReducer';
 import writtenAnswerReducer from './modules/writtenAnswerReducer';
 import scaleAnswerReducer from './modules/scaleAnswerReducer';
@@ -17,6 +18,7 @@ export default combineReducers({
   register: RegisterReducer,
   signup: signUpReducer,
   auth: authReducer,
+  fbuser: firebaseReducer,
   answerReducer,
   projectReducer,
   writtenAnswerReducer,

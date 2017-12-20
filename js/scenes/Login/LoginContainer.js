@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import Login from "./Login";
 import { connect } from "react-redux";
 import * as firebase from 'firebase';
-import { email, password } from "../../redux/modules/signup";
+import { NavigationActions } from '@expo/ex-navigation';
 
+import Login from "./Login";
+import { email, password } from "../../redux/modules/signup";
+import Loader from '../../components/Loader';
 import { goToRoute } from "../../lib/navigationHelpers";
 
 class LoginContainer extends Component {
@@ -33,28 +35,29 @@ class LoginContainer extends Component {
     this.props.dispatch(password(value))
   }
 
-  componentDidUpdate() {
-    if (this.props.isAuthenticated ) {
+  componentWillReceiveProps(nextProps) {
+    if(this.props.isAuthed === null && nextProps.isAuthed === true) {
       goToRoute('home')
-    } 
+    }
   }
 
 
   render() {
-    const { currentNavigatorUID, isAuthenticated } = this.props;
+    const { currentNavigatorUID, user, isAuthed } = this.props;
 
-    return (
-      <View>
+    return isAuthed === null 
+    ? <Loader />
+    : <View>
         <Login currentNavigatorUID={currentNavigatorUID} handleSubmit={this.handleSubmit} email={this.handleEmailChange} password={this.handlePasswordChange} />
       </View>
-    );
   }
 }
 
 const mapStateToProps = state => {
   return {
     currentNavigatorUID: state.navigation.currentNavigatorUID,
-    isAuthenticated: state.auth.user,
+    user: state.auth.user,
+    isAuthed: state.auth.isAuthed,
     email: state.signup.email,
     password: state.signup.password
   };
