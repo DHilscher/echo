@@ -4,20 +4,26 @@ import { connect } from 'react-redux';
 import { getFullname, getEmail} from '../../redux/modules/firebase'
 import store from '../../redux/store'
 import Home from './Home';
+import Loader from '../../components/Loader';
 
 class HomeContainer extends Component {
 
   componentDidMount() {
     const { user } = this.props
-    store.dispatch(getFullname(user.uid))
-    store.dispatch(getEmail(user.uid))
+    console.log(user)
+    if(user){
+      store.dispatch(getFullname(user.uid))
+      store.dispatch(getEmail(user.uid))
+    }
   }
 
   render() {
     const { fullName } = this.props.userInfo
-    console.log(fullName)
+    const { user } = this.props
     return (
-      <Home fullname={fullName} />
+      user 
+      ? <Home fullname={fullName} />
+      : <Loader />
     );
   }
 }
