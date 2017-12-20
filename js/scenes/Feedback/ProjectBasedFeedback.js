@@ -44,15 +44,9 @@ class ProjectBasedFeedback extends Component {
     }
 
     return (
-<<<<<<< HEAD
       <View style={styles.projectContainer}>
-        <NavigationBar pageTitle="Feedback"/>
-        
-=======
-      <ScrollView style={styles.projectContainer}>
         <NavigationBar pageTitle="Feedback" />
 
->>>>>>> Fixed back button functionality.
         <View style={styles.questionWrapper}>
           <Text style={styles.questionText}>Choose a project!</Text>
         </View>
@@ -67,23 +61,18 @@ class ProjectBasedFeedback extends Component {
               >
                 <CustomSquareButton btnText={projectName} />
               </TouchableOpacity>
-<<<<<<< HEAD
-            )}
-    
+            ))}
           </View>
         </ScrollView>
 
-        <TouchableOpacity onPress={() => goToRoute("project")} activeOpacity={0.7} style={styles.addbutton}>
+        <TouchableOpacity
+          onPress={() => goToRoute("project")}
+          activeOpacity={0.7}
+          style={styles.addbutton}
+        >
           <AddButton />
         </TouchableOpacity>
       </View>
-
-=======
-            ))}
-          </View>
-        </View>
-      </ScrollView>
->>>>>>> Fixed back button functionality.
     );
   }
 }
