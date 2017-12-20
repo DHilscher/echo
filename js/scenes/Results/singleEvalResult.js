@@ -12,7 +12,6 @@ import { goToRouteWithProps } from "../../lib/navigationHelpers";
 import NavigationBar from "../../components/NavigationBar";
 
 class SingleResults extends Component {
-
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",

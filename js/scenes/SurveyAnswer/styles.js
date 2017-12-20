@@ -76,6 +76,10 @@ export default StyleSheet.create({
     fontSize: textSizes.title2,
     paddingLeft: 80,
     marginBottom: margins.marginM
+  },
+
+  nextbutton:{
+    bottom: 0
   }
 
 });

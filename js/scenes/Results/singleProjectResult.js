@@ -17,7 +17,6 @@ const data = [
 ]
 
 class SingleResults extends Component {
-
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",

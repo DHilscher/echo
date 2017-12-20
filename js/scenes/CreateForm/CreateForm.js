@@ -6,6 +6,7 @@ import styles from './styles';
 import { goToRoute } from "../../lib/navigationHelpers";
 import AddButton from "../../components/Buttons/AddButton";
 import { colors } from "../../config/styles";
+import { goToRoute } from "../../lib/navigationHelpers";
 
 const CreateFormStep1 = ({handleFormTitle}) => {
   return (
