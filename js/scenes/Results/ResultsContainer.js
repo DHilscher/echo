@@ -5,6 +5,7 @@ import Results from "./Results";
 import styles from "./styles";
 import { colors } from "../../config/styles";
 import NavigationBar from "../../components/NavigationBar";
+import BackButton from "../../components/BackButton";
 
 class ResultsContainer extends Component {
   constructor() {
@@ -16,12 +17,12 @@ class ResultsContainer extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
-      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {
         translucent: true
-      }
+      },
+      renderLeft: (route, props) => <BackButton />
     }
   };
 
@@ -32,7 +33,7 @@ class ResultsContainer extends Component {
   render() {
     return (
       <ScrollView style={styles.resultContainer}>
-        <NavigationBar pageTitle="Results"/>
+        <NavigationBar pageTitle="Results" />
 
         <View style={styles.resultSearch}>
           <TextInput style={styles.searchBar} />
@@ -43,7 +44,6 @@ class ResultsContainer extends Component {
           ResultTabs={this.state.ResultTabs}
           changeTab={this.changeTab}
         />
-
       </ScrollView>
     );
   }

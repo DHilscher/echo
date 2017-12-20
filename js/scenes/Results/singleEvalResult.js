@@ -1,40 +1,33 @@
-import React, {Component} from "react";
-import {
-  Text,
-  View,
-  Image,
-  TextInput,
-  TouchableOpacity
-} from "react-native";
+import React, { Component } from "react";
+import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 
 import styles from "./styles";
 import { colors } from "../../config/styles";
 import { goToRouteWithProps } from "../../lib/navigationHelpers";
 import NavigationBar from "../../components/NavigationBar";
+import BackButton from "../../components/BackButton";
 
 class SingleResults extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
-      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {
         translucent: true
-      }
+      },
+      renderLeft: (route, props) => <BackButton />
     }
   };
-  
+
   render() {
+    const { passedProps } = this.props;
 
-    const { passedProps } = this.props
-
-    console.log('eval', passedProps)
+    console.log("eval", passedProps);
 
     return (
       <View>
-
-        <NavigationBar pageTitle="Results"/>
+        <NavigationBar pageTitle="Results" />
 
         <View style={styles.resultSearch}>
           <TextInput style={styles.searchBar} />
@@ -44,17 +37,24 @@ class SingleResults extends Component {
         <Text style={styles.singleTitle}>{passedProps.passedProps.name}</Text>
         <Text style={styles.singleAbout}>{passedProps.x.name}</Text>
 
-        {passedProps.x.evals.map((x, idx) => 
-          <TouchableOpacity key={idx} activeOpacity={0.8} onPress={()=>goToRouteWithProps('answer', x)}>
-            <View style={ idx%2==0 ? styles.evenSingleResult : styles.oddSingleResult }>
+        {passedProps.x.evals.map((x, idx) => (
+          <TouchableOpacity
+            key={idx}
+            activeOpacity={0.8}
+            onPress={() => goToRouteWithProps("answer", x)}
+          >
+            <View
+              style={
+                idx % 2 == 0 ? styles.evenSingleResult : styles.oddSingleResult
+              }
+            >
               <Text style={styles.resultname}>{x}</Text>
             </View>
           </TouchableOpacity>
-        )}
-
+        ))}
       </View>
     );
   }
-};
+}
 
-export default SingleResults 
+export default SingleResults;
