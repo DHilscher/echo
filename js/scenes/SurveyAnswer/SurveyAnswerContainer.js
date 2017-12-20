@@ -6,6 +6,16 @@ import SurveyAnswer from './SurveyAnswer'
 import { getAnswer } from '../../redux/modules/answer';
 
 class SurveyAnswerContainer extends Component {
+  static route = {
+    navigationBar: {
+      backgroundColor: "#00000000",
+      borderBottomWidth: 0,
+      translucent: true,
+      header: {
+        translucent: true
+      }
+    }
+  };
 
   componentDidMount(){
     this.props.dispatch(getAnswer())
