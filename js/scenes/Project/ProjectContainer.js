@@ -7,6 +7,7 @@ import { goToRoute } from "../../lib/navigationHelpers";
 import { projectTitle } from "../../redux/modules/projectReducer";
 import { projectDesc } from "../../redux/modules/projectReducer";
 import { addProject } from "../../config/models";
+import { colors } from "../../config/styles";
 
 class ProjectContainer extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class ProjectContainer extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {

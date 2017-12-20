@@ -10,6 +10,7 @@ import SurveyQuestion from "../../components/SurveyQuestion";
 import { connect } from "react-redux";
 import AddButton from "../../components/Buttons/AddButton";
 import NavigationBar from "../../components/NavigationBar";
+import { colors } from '../../config/styles';
 
 const question = 'How was sjgjsdkgjdshglsd'
 
@@ -18,6 +19,7 @@ class SurveyCollection extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {

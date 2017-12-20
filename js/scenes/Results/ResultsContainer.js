@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, ScrollView } from "react-native";
 
 import Results from "./Results";
 import styles from "./styles";
+import { colors } from "../../config/styles";
 import NavigationBar from "../../components/NavigationBar";
 
 class ResultsContainer extends Component {
@@ -15,6 +16,7 @@ class ResultsContainer extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {

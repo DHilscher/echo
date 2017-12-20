@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 15,
     padding: margins.marginS,
-    marginBottom: margins.marginL,
+    marginHorizontal: margins.marginS/2,
+    marginBottom: margins.marginM,
   },
   squareButtonText: {
     fontFamily: typography.fontHeavy,

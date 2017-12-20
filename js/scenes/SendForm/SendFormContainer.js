@@ -3,11 +3,13 @@ import { Text, View } from "react-native";
 
 import SendMessage from './SendMessage';
 import SendEmail from './SendEmail';
+import { colors } from '../../config/styles';
 
 class SendFormContainer extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {

@@ -61,6 +61,7 @@ class ProjectBasedFeedback extends Component {
                 <CustomSquareButton btnText={projectName}/>
               </TouchableOpacity>
             )}
+    
           </View>
         </ScrollView>
 
@@ -68,6 +69,7 @@ class ProjectBasedFeedback extends Component {
           <AddButton />
         </TouchableOpacity>
       </View>
+
     );
   }
 }
