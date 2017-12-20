@@ -42,6 +42,10 @@ export const styles = StyleSheet.create({
     stepIndicatorWrapper: {
         marginBottom: margins.marginL,
     },
+    wholeContentContainer: {
+        flex: 1, 
+        alignItems:'center',
+    },
     registerContentContainer: {
         position: 'absolute',
         bottom: 20,

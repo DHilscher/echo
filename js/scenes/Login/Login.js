@@ -10,10 +10,8 @@ const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginHeaderWrapper}>
-        <Image source={require("../../assets/images/login/login-items.png")}/>
-        <Image
-          source={require("../../assets/images/echo-logo-white.png")}
-        />
+        <Image source={require("../../assets/images/login/login-items.png")} style={styles.loginHeaderImage} resizeMode="contain"/>
+        <Image source={require("../../assets/images/echo-logo-white.png")} resizeMode="contain" />
       </View>
 
       <View style={styles.loginContentWrapper}>

@@ -8,6 +8,7 @@ import CustomTextArea from "../../components/CustomTextField/CustomTextArea";
 import NavigationBar from "../../components/NavigationBar";
 
 
+
 const SendMessage = () => {
   return (
     <ScrollView style={styles.sendFormContainer}>
@@ -21,10 +22,11 @@ const SendMessage = () => {
       <View style={styles.messageWrapper}>
 
         <CustomTextArea 
-          defaultValue="Hi [Name of recipient], it’s Jenny! 
-          I was wondering if you had some time to fill out a 
-          quick feedback form so I can know how I am performing, 
-          so I can keep growing. Thanks so much for your time." 
+          defaultValue={`Hi, it’s Jenny! 
+          
+I was wondering if you had some time to fill out a quick feedback form so I can know how I am performing, so I can keep growing. 
+
+Thanks so much for your time.`}
           />
 
           <TouchableOpacity activeOpacity={0.7} onPress={() => goToRoute("sendEmail")}>
