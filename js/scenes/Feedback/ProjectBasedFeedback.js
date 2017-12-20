@@ -11,6 +11,7 @@ import { getProjectList } from "../../redux/modules/projectList";
 import NavigationBar from "../../components/NavigationBar";
 import CustomSquareButton from "../../components/Buttons/CustomSquareButton";
 import Loader from "../../components/Loader";
+import AddButton from "../../components/Buttons/AddButton";
 
 class ProjectBasedFeedback extends Component {
   static route = {
@@ -44,7 +45,7 @@ class ProjectBasedFeedback extends Component {
     } 
 
     return (
-      <ScrollView style={styles.projectContainer}>
+      <View style={styles.projectContainer}>
         <NavigationBar pageTitle="Feedback"/>
         
         <View style={styles.questionWrapper}>
@@ -53,17 +54,22 @@ class ProjectBasedFeedback extends Component {
           </Text>
         </View>
 
-        <View style={styles.projectListContainer}>
+        <ScrollView style={styles.projectListContainer}>
           <View style={styles.optionProjectWrapper}>
             { projectList.map((projectName, index) => 
               <TouchableOpacity key={index} onPress={() => goToRoute("createForm")} activeOpacity={0.7}>
                 <CustomSquareButton btnText={projectName}/>
               </TouchableOpacity>
             )}
-          </View>     
-        </View>
+    
+          </View>
+        </ScrollView>
 
-      </ScrollView>
+        <TouchableOpacity onPress={() => goToRoute("project")} activeOpacity={0.7} style={styles.addbutton}>
+          <AddButton />
+        </TouchableOpacity>
+      </View>
+
     );
   }
 }
