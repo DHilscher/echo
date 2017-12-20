@@ -3,17 +3,18 @@ import { Text, View } from "react-native";
 
 import FeedBack from "./Feedback";
 import { colors } from "../../config/styles";
+import BackButton from "../../components/BackButton";
 
 class FeedbackContainer extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
-      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {
         translucent: true
-      }
+      },
+      renderLeft: (route, props) => <BackButton />
     }
   };
 

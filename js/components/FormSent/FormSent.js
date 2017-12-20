@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
 import SuccessPage from "../../components/SuccessPage";
-import { colors } from "../../config/styles";
+import BackButton from "../BackButton";
 
 class FormSent extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
-      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {
         translucent: true
-      }
+      },
+      renderLeft: (route, props) => <BackButton />
     }
   };
   render() {

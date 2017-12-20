@@ -1,36 +1,36 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { colors, typography, textSizes, margins } from '../../config/styles';
+import { colors, typography, textSizes, margins } from "../../config/styles";
 
 export default StyleSheet.create({
-  settingContainer:{
+  settingContainer: {
     flex: 1,
-    backgroundColor: colors.backgroundLightGreen,
+    backgroundColor: colors.backgroundLightGreen
   },
   settingSection: {
-    padding: margins.marginL,
+    padding: margins.marginL
   },
   sectionTitle: {
-    color: 'white', 
+    color: "white",
     fontSize: textSizes.title3,
     fontFamily: typography.fontHeavy,
-    textAlign: 'center',
-    marginBottom: margins.marginL,
+    textAlign: "center",
+    marginBottom: margins.marginL
   },
   userInformationSection: {
-    backgroundColor: colors.mainGreen,
+    backgroundColor: colors.mainGreen
   },
   notificationSection: {
-    backgroundColor: colors.backgroundLightGreen,
+    backgroundColor: colors.backgroundLightGreen
   },
   optionContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginVertical: margins.marginS,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginVertical: margins.marginS
   },
   optionText: {
-    color: 'white',
+    color: "white",
     fontSize: textSizes.bodyL,
-    fontFamily: typography.fontHeavy,
-  },
-})
+    fontFamily: typography.fontHeavy
+  }
+});

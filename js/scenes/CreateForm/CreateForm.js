@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import { Text, View, TouchableOpacity, Image, TextInput } from "react-native";
+import PropTypes from "prop-types";
 
-import styles from './styles';
+import styles from "./styles";
 import { goToRoute } from "../../lib/navigationHelpers";
 import AddButton from "../../components/Buttons/AddButton";
 import { colors } from "../../config/styles";
 
-const CreateFormStep1 = ({handleFormTitle}) => {
+const CreateFormStep1 = ({ handleFormTitle }) => {
   return (
     <View style={styles.feedbackContainer}>
       <View style={styles.headerNavBarWrapper}>
@@ -24,40 +24,41 @@ const CreateFormStep1 = ({handleFormTitle}) => {
           clearButtonMode="while-editing"
           autoFocus={true}
           autoCorrect={false}
-          onChangeText={(text) => handleFormTitle(text)}
-          style={styles.textFieldText} />
+          onChangeText={text => handleFormTitle(text)}
+          style={styles.textFieldText}
+        />
       </View>
 
       <View style={styles.questionWrapper}>
         <Text style={styles.questionText}>
           Start getting the answers you need.
         </Text>
-        <Text style={styles.questionText}>
-          Add a question to get started.
-        </Text>
+        <Text style={styles.questionText}>Add a question to get started.</Text>
       </View>
 
       <View>
         <View style={styles.addButtonContainer}>
-          <View style={styles.mainGreenView}></View>
-          <View style={styles.lightGreenView}></View>
+          <View style={styles.mainGreenView} />
+          <View style={styles.lightGreenView} />
         </View>
-        <TouchableOpacity onPress={() => goToRoute("survey")} activeOpacity={0.7}>
+        <TouchableOpacity
+          onPress={() => goToRoute("survey")}
+          activeOpacity={0.7}
+        >
           <View style={styles.addButtonWrapper}>
             <AddButton />
           </View>
         </TouchableOpacity>
-
       </View>
 
       <View style={styles.surveyImage}>
         <Image
           source={require("../../assets/images/survey/survey-items.png")}
-          resizeMode="contain" />
+          resizeMode="contain"
+        />
       </View>
-
     </View>
-  )
-}
+  );
+};
 
-export default CreateFormStep1 
+export default CreateFormStep1;
