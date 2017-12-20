@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
+import { colors } from "../../config/styles";
 import CustomButton from '../Buttons/CustomButton';
 import NavigationBar from '../NavigationBar';
 import { goToRoute } from "../../lib/navigationHelpers";
@@ -13,6 +14,7 @@ class MultipleChoice extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {

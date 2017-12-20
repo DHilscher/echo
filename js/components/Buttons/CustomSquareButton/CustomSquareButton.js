@@ -6,7 +6,7 @@ import styles from './styles';
 
 const CustomSquareButton = ({ btnText }) => (
   <View style={styles.squareWrapper}>
-    <Text style={styles.squareButtonText}>{btnText}</Text>
+    <Text style={styles.squareButtonText} numberOfLines={3} >{btnText}</Text>
   </View>
 );
 

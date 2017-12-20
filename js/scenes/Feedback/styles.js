@@ -21,12 +21,17 @@ export default StyleSheet.create({
   projectContainer: {
     backgroundColor: colors.backgroundLightGreen,
   },
-  optionProjectWrapper: {
+  projectListContainer: {
     backgroundColor: colors.backgroundLightGreen,
-    padding: margins.marginL,
-    paddingBottom: 0,
-    justifyContent: 'space-between',
+    paddingHorizontal: margins.marginS,
+    paddingVertical: margins.marginL,
+    flex: 1,
+    alignItems: 'center',
+  },
+  optionProjectWrapper: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
   },
+
 })
