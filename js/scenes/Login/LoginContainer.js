@@ -47,9 +47,7 @@ class LoginContainer extends Component {
 
     return isAuthed === null 
     ? <Loader />
-    : <View>
-        <Login currentNavigatorUID={currentNavigatorUID} handleSubmit={this.handleSubmit} email={this.handleEmailChange} password={this.handlePasswordChange} />
-      </View>
+    : <Login currentNavigatorUID={currentNavigatorUID} handleSubmit={this.handleSubmit} email={this.handleEmailChange} password={this.handlePasswordChange} />
   }
 }
 

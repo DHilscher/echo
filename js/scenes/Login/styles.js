@@ -1,6 +1,9 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 import { colors, typography, textSizes, margins } from '../../config/styles';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
   container: {
@@ -11,10 +14,10 @@ export default StyleSheet.create({
   loginHeaderWrapper: {
     flex: 6,
     alignItems: "center",
+    width: windowWidth,
   },
-  logoImage: {
-    marginTop: margins.marginL + margins.marginL,
-    marginBottom: margins.marginL,
+  loginHeaderImage: {
+    width: windowWidth,
   },
   loginContentWrapper: {
     flex: 4,
@@ -24,8 +27,6 @@ export default StyleSheet.create({
     marginTop: margins.marginL,
   },
   bottomWrapper: {
-    // position: "absolute",
-    // bottom: 0,
     flex: 0.1,
     margin: margins.marginL,
   },
