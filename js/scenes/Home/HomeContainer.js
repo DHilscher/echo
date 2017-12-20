@@ -8,15 +8,6 @@ import Loader from '../../components/Loader';
 
 class HomeContainer extends Component {
 
-  componentDidMount() {
-    const { user } = this.props
-    console.log(user)
-    if(user){
-      store.dispatch(getFullname(user.uid))
-      store.dispatch(getEmail(user.uid))
-    }
-  }
-
   render() {
     const { fullName } = this.props.userInfo
     const { user } = this.props

@@ -8,7 +8,7 @@ import {
 import Router from "./navigation/routes";
 import Store from "./redux/store";
 import { Provider } from "react-redux";
-
+import { getFullname, getEmail} from './redux/modules/firebase'
 import { login, logout } from './redux/modules/authentication';
 
 const navigationContext = new NavigationContext({
@@ -19,6 +19,7 @@ const navigationContext = new NavigationContext({
 firebase.auth().onAuthStateChanged(function(user) {
   if(user) {
     Store.dispatch(login(user))
+    Store.dispatch(getFullname(user.uid))
   } else {
     Store.dispatch(logout())
   }
