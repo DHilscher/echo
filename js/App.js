@@ -34,7 +34,7 @@ class App extends Component {
           <StackNavigation
             navigatorUID="root"
             id="root"
-            initialRoute={Router.getRoute("onboarding")}
+            initialRoute={Router.getRoute("login")}
           />
         </NavigationProvider>
       </Provider>

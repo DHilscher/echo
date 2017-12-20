@@ -40,7 +40,7 @@ class SettingsContainer extends Component {
     const { email, fullName } = this.props.userInfo
     const { user } = this.props
 
-    return <Setting  fullname={fullName} email={email} user={user} _updateName={this._updateName} _updateEmail={this._updateEmail} />;
+    return <Setting fullname={fullName} email={email} user={user} _updateName={this._updateName} _updateEmail={this._updateEmail} />;
   }
 }
 

@@ -8,6 +8,9 @@ import SmallCustomButton from '../../components/Buttons/SmallCustomButton';
 import NavigationBar from "../../components/NavigationBar";
 import { password } from '../../redux/modules/signup';
 import SettingsInputs from '../../components/CustomTextField/SettingsInputs';
+import { goToRoute } from "../../lib/navigationHelpers";
+import { logout } from "../../redux/modules/authentication";
+import store from '../../redux/store';
 
 class Setting extends Component {
 
@@ -22,6 +25,16 @@ class Setting extends Component {
       newEmail: '',
       newName: ''
     }
+  }
+
+  signOut = () => {
+    firebase
+        .auth()
+        .signOut()
+        .then(store.dispatch(logout()))
+        .then(()=>{
+          return goToRoute('login')
+        })
   }
 
   _updateNameChange = () => {
@@ -171,6 +184,12 @@ class Setting extends Component {
             </View>
           </View>
   
+        </View>
+
+        <View style={[styles.settingSection, styles.notificationSection]}>
+          <TouchableOpacity activeOpacity={0.5} onPress={this.signOut} >
+              <SmallCustomButton btnText="Sign Out"/>
+          </TouchableOpacity>
         </View>
 
       </ScrollView>

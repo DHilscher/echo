@@ -22,6 +22,9 @@ class LoginContainer extends Component {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then(()=>{
+        goToRoute('home')
+      })
       .catch(() => {
         this.setState({ error: "Your email or password is incorrect."})
       });
