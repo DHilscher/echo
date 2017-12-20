@@ -20,13 +20,23 @@ export default StyleSheet.create({
   // below are the style for project-base scene
   projectContainer: {
     backgroundColor: colors.backgroundLightGreen,
+    height: '100%'
+  },
+  projectListContainer: {
+    backgroundColor: colors.backgroundLightGreen,
+    height: '100%',
+    paddingHorizontal: margins.marginS,
+    paddingVertical: margins.marginL,
+    flex: 1,
   },
   optionProjectWrapper: {
-    backgroundColor: colors.backgroundLightGreen,
-    padding: margins.marginL,
-    paddingBottom: 0,
-    justifyContent: 'space-between',
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'space-around',
   },
+  addbutton:{
+    position: 'absolute',
+    right: 25,
+    bottom: 25
+  }
 })

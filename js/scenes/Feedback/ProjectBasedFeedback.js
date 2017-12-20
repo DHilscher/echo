@@ -4,17 +4,20 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import styles from "./styles";
+import { colors } from "../../config/styles";
 import { goToRoute } from "../../lib/navigationHelpers";
 import realm from "../../config/models";
 import { getProjectList } from "../../redux/modules/projectList"; 
 import NavigationBar from "../../components/NavigationBar";
 import CustomSquareButton from "../../components/Buttons/CustomSquareButton";
 import Loader from "../../components/Loader";
+import AddButton from "../../components/Buttons/AddButton";
 
 class ProjectBasedFeedback extends Component {
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
+      tintColor: colors.darkGreen,
       borderBottomWidth: 0,
       translucent: true,
       header: {
@@ -33,7 +36,6 @@ class ProjectBasedFeedback extends Component {
   }
 
   render() {
-    console.log("test", this.props.projectList)
     const { projectList, isLoading } = this.props;
 
     if (isLoading) {
@@ -43,7 +45,7 @@ class ProjectBasedFeedback extends Component {
     } 
 
     return (
-      <ScrollView style={styles.projectContainer}>
+      <View style={styles.projectContainer}>
         <NavigationBar pageTitle="Feedback"/>
         
         <View style={styles.questionWrapper}>
@@ -52,16 +54,20 @@ class ProjectBasedFeedback extends Component {
           </Text>
         </View>
 
-        <View style={styles.optionProjectWrapper}>
-          { projectList.map((projectName, index) => 
-            <TouchableOpacity key={index} onPress={() => goToRoute("createForm")} activeOpacity={0.7}>
-              <CustomSquareButton btnText={projectName}/>
-            </TouchableOpacity>
-          )}
-          
-          
-        </View>
-      </ScrollView>
+        <ScrollView style={styles.projectListContainer}>
+          <View style={styles.optionProjectWrapper}>
+            { projectList.map((projectName, index) => 
+              <TouchableOpacity key={index} onPress={() => goToRoute("createForm")} activeOpacity={0.7}>
+                <CustomSquareButton btnText={projectName}/>
+              </TouchableOpacity>
+            )}
+          </View>
+        </ScrollView>
+
+        <TouchableOpacity onPress={() => goToRoute("project")} activeOpacity={0.7} style={styles.addbutton}>
+          <AddButton />
+        </TouchableOpacity>
+      </View>
     );
   }
 }
