@@ -14,10 +14,6 @@ const SurveyQuestion = ({ surveyQuestion, surveyType, surveyNum }) => (
       <Text style={styles.question}>{surveyQuestion}</Text>
       <Text style={styles.type}>Type: {surveyType}</Text>
 
-      <TouchableOpacity style={styles.closeButton}>
-        <Icon name={'md-close'} style={styles.close} />
-      </TouchableOpacity>
-
     </View>
 );
 

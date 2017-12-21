@@ -10,6 +10,11 @@ import NavigationBar from "../../components/NavigationBar";
 
 
 const SendMessage = () => {
+
+  handleEmailMessage = value => {
+    console.log(value)
+  };
+
   return (
     <ScrollView style={styles.sendFormContainer}>
 
@@ -22,6 +27,7 @@ const SendMessage = () => {
       <View style={styles.messageWrapper}>
 
         <CustomTextArea 
+          handler={this.handleEmailMessage}
           defaultValue={`Hi, it’s Jenny! 
           
 I was wondering if you had some time to fill out a quick feedback form so I can know how I am performing, so I can keep growing. 

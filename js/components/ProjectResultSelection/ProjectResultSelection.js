@@ -14,10 +14,7 @@ const data = [
   { name: 'Livigi', title: 'typo', about: 'Is amazing' },
   { name: 'Zenith', title: 'pro', about: 'Is wonderful' },
   { name: 'Apple', title: 'pro', about: 'Does not have windows' },
-  { name: 'Apple2', title: 'pro', about: 'Does not have windows' },
-  { name: 'Apple3', title: 'pro', about: 'Does not have windows' },
-  { name: 'Apple4', title: 'pro', about: 'Does not have windows' },
-  { name: 'Apple5', title: 'pro', about: 'Does not have windows' },
+  { name: 'Face book', title: 'pro', about: 'Does not have windows' },
 ]
 
 const ProjectResultSelection = () => (

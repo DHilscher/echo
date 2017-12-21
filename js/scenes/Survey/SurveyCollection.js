@@ -55,7 +55,7 @@ class SurveyCollection extends Component {
 
         {collection.map((survey, index) => (
           <SurveyQuestion
-            key={survey.question}
+            key={index}
             surveyQuestion={
               survey.question.length > 10 ? (
                 `${survey.question.slice(0, 15)}...`
