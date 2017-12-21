@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  KeyboardAvoidingView
+} from "react-native";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
@@ -31,7 +38,7 @@ class Scale extends Component {
   render() {
     const { formTitle } = this.props;
     return (
-      <View style={styles.scaleContainer}>
+      <KeyboardAvoidingView style={styles.scaleContainer} behavior="padding">
         <NavigationBar pageTitle={formTitle} />
 
         <Text style={styles.scaleinstruction}>
@@ -53,7 +60,7 @@ class Scale extends Component {
         >
           <CustomButton btnText={"Add"} />
         </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

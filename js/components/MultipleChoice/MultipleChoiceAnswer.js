@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  KeyboardAvoidingView
+} from "react-native";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
@@ -48,7 +55,7 @@ class MultipleChoiceAnswer extends Component {
     const { formTitle } = this.props;
 
     return (
-      <View style={styles.multipleContainer}>
+      <KeyboardAvoidingView style={styles.multipleContainer} behavior="padding">
         <NavigationBar pageTitle={formTitle} />
 
         <Text style={styles.multipleinstruction}>
@@ -95,7 +102,7 @@ class MultipleChoiceAnswer extends Component {
         >
           <CustomButton btnText={"Add"} />
         </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

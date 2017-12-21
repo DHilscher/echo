@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { KeyboardAvoidingView, Text, View, TouchableOpacity, Image, TextInput } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  TextInput
+} from "react-native";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
@@ -9,7 +16,7 @@ import { colors } from "../../config/styles";
 
 const CreateFormStep1 = ({ handleFormTitle }) => {
   return (
-    <KeyboardAvoidingView style={styles.feedbackContainer}>
+    <KeyboardAvoidingView style={styles.feedbackContainer} behavior="padding">
       <View style={styles.headerNavBarWrapper}>
         <Image
           style={styles.headerNavBar}

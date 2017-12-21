@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  KeyboardAvoidingView
+} from "react-native";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
@@ -32,7 +39,7 @@ class WrittenAnswer extends Component {
     const { formTitle } = this.props;
 
     return (
-      <View style={styles.writtenContainer}>
+      <KeyboardAvoidingView style={styles.writtenContainer} behavior="padding">
         <NavigationBar pageTitle={formTitle} />
 
         <Text style={styles.writteninstruction}>
@@ -54,7 +61,7 @@ class WrittenAnswer extends Component {
           style={styles.target}
           source={require("../../assets/images/icon-target.png")}
         />
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

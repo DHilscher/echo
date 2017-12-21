@@ -27,7 +27,7 @@ const Project = ({
   return (
     <ScrollView>
       <NavigationBar pageTitle="New Project" />
-      <KeyboardAvoidingView>
+      <KeyboardAvoidingView behavior="padding">
         <View style={styles.containerP1}>
           <View style={styles.textInput}>
             <CustomSingleTextField placeholder={""} handler={handleChange} />

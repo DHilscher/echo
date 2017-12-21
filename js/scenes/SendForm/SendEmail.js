@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { KeyboardAvoidingView, Text, View, TouchableOpacity, ScrollView } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView
+} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { connect } from "react-redux";
 import styles from "./styles";
@@ -92,7 +98,10 @@ class SendEmail extends Component {
             </View>
           );
         })}
-        <KeyboardAvoidingView style={styles.sendEmailContentWrapper}>
+        <KeyboardAvoidingView
+          style={styles.sendEmailContentWrapper}
+          behavior="padding"
+        >
           <CustomSingleTextField
             placeholder="Recipient Name"
             handler={this.handleRecipientName}

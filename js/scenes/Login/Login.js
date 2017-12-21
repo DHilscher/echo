@@ -16,7 +16,7 @@ import CustomSingleTextField from "../../components/CustomTextField/CustomSingle
 
 const Login = ({ currentNavigatorUID, handleSubmit, email, password }) => {
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <KeyboardAvoidingView style={styles.container} behavior="padding">
       <View style={styles.loginHeaderWrapper}>
         <Image
           source={require("../../assets/images/login/login-items.png")}

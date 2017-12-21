@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  KeyboardAvoidingView
+} from "react-native";
 
 import styles from "./styles";
 import { colors } from "../../config/styles";
@@ -24,7 +31,7 @@ class SingleResults extends Component {
     const { passedProps } = this.props;
 
     return (
-      <View>
+      <KeyboardAvoidingView behavior="padding">
         <NavigationBar pageTitle="Results" />
 
         <View style={styles.resultSearch}>
@@ -50,7 +57,7 @@ class SingleResults extends Component {
             </View>
           </TouchableOpacity>
         ))}
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
