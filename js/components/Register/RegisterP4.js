@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
+import { KeyboardAvoidingView, View, Text, TouchableOpacity, Image, TextInput } from "react-native";
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
 
@@ -48,7 +48,7 @@ class Register4 extends Component {
         const isEnabled = this.state.email.length > 0 && this.state.password.length > 0;
         
         return (
-            <View style={styles.registerContainer}>
+            <KeyboardAvoidingView style={styles.registerContainer}>
                 <Image
                     style={styles.image}
                     source={require("../../assets/images/registration/registration-4.png")}
@@ -101,7 +101,7 @@ class Register4 extends Component {
                     </View>
                 </View>
 
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 }
