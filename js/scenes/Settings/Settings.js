@@ -13,7 +13,6 @@ import CustomButton from '../../components/Buttons/CustomButton';
 import SmallCustomButton from '../../components/Buttons/SmallCustomButton';
 import NavigationBar from "../../components/NavigationBar";
 import SettingsTextField from '../../components/CustomTextField/SettingsTextField';
-import SettingsInputs from '../../components/CustomTextField/SettingsInputs';
 
 class Setting extends Component {
 
