@@ -11,13 +11,6 @@ import { colors } from "../../config/styles";
 import BackButton from "../../components/BackButton";
 
 class ProjectContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showReminder: false
-    };
-  }
-
   static route = {
     navigationBar: {
       backgroundColor: "#00000000",
@@ -30,24 +23,12 @@ class ProjectContainer extends Component {
     }
   };
 
-  componentDidMount() {
-    this.props.projectPage;
-  }
-
   handleChange = value => {
     this.props.dispatch(projectTitle(value));
   };
 
   handleChange2 = value => {
     this.props.dispatch(projectDesc(value));
-  };
-
-  handleReminder = () => {
-    if (this.state.showReminder === true) {
-      this.setState({ showReminder: false });
-    } else {
-      this.setState({ showReminder: true });
-    }
   };
 
   render() {
@@ -65,8 +46,6 @@ class ProjectContainer extends Component {
         handleProjectAdded={handleProjectAdded}
         handleChange={this.handleChange}
         handleChange2={this.handleChange2}
-        showReminder={this.state.showReminder}
-        handleReminder={this.handleReminder}
       />
     );
   }
