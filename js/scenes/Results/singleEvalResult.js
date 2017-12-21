@@ -23,8 +23,6 @@ class SingleResults extends Component {
   render() {
     const { passedProps } = this.props;
 
-    console.log("eval", passedProps);
-
     return (
       <View>
         <NavigationBar pageTitle="Results" />
