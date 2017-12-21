@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Image, TextInput, ScrollView } from "react-native";
+import { KeyboardAvoidingView, Text, View, Image, TextInput, ScrollView } from "react-native";
 
 import Results from "./Results";
 import styles from "./styles";
@@ -35,10 +35,10 @@ class ResultsContainer extends Component {
       <ScrollView style={styles.resultContainer}>
         <NavigationBar pageTitle="Results" />
 
-        <View style={styles.resultSearch}>
+        <KeyboardAvoidingView style={styles.resultSearch}>
           <TextInput style={styles.searchBar} />
           <Image source={require("../../assets/images/icon-magnifier.png")} />
-        </View>
+        </KeyboardAvoidingView>
 
         <Results
           ResultTabs={this.state.ResultTabs}

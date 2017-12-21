@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View, Image, TouchableOpacity, Switch } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, Text, View, Image, TouchableOpacity, Switch } from 'react-native';
 import PropTypes from 'prop-types';
 import * as firebase from 'firebase';
 
@@ -125,7 +125,7 @@ class Setting extends Component {
       <ScrollView style={styles.settingContainer}>
         <NavigationBar pageTitle="Settings"/>
         
-        <View style={[styles.settingSection, styles.userInformationSection]}>
+        <KeyboardAvoidingView style={[styles.settingSection, styles.userInformationSection]}>
           <Text style={styles.sectionTitle}>User Information</Text>
   
           <View>
@@ -221,7 +221,7 @@ class Setting extends Component {
             }
           </View>
   
-        </View>
+        </KeyboardAvoidingView>
 
         <View style={[styles.signOutSection, styles.notificationSection]}>
           <TouchableOpacity activeOpacity={0.5} onPress={this.signOut} >

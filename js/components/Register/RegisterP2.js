@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { KeyboardAvoidingView, View, Text, TouchableOpacity, Image } from "react-native";
 import { connect } from 'react-redux';
 import { styles } from "./styles";
 import { colors } from "../../config/styles";
@@ -17,7 +17,7 @@ class Register2 extends Component {
 
   render() {
     return (
-      <View style={styles.registerContainer}>
+      <KeyboardAvoidingView style={styles.registerContainer}>
         <Image
           style={styles.image}
           source={require("../../assets/images/registration/registration-2.png")}
@@ -48,7 +48,7 @@ class Register2 extends Component {
           </View>
         </View>
         
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 };

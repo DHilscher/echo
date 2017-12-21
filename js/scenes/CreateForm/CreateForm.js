@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, TouchableOpacity, Image, TextInput } from "react-native";
+import { KeyboardAvoidingView, Text, View, TouchableOpacity, Image, TextInput } from "react-native";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
@@ -9,7 +9,7 @@ import { colors } from "../../config/styles";
 
 const CreateFormStep1 = ({ handleFormTitle }) => {
   return (
-    <View style={styles.feedbackContainer}>
+    <KeyboardAvoidingView style={styles.feedbackContainer}>
       <View style={styles.headerNavBarWrapper}>
         <Image
           style={styles.headerNavBar}
@@ -57,7 +57,7 @@ const CreateFormStep1 = ({ handleFormTitle }) => {
           resizeMode="contain"
         />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
