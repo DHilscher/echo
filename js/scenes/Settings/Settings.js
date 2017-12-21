@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, Image, TouchableOpacity, Switch } from 'react-native';
 import PropTypes from 'prop-types';
 import * as firebase from 'firebase';
+
 import styles from './styles';
 import { colors } from '../../config/styles.js';
-import SmallCustomButton from '../../components/Buttons/SmallCustomButton';
-import NavigationBar from "../../components/NavigationBar";
 import { password } from '../../redux/modules/signup';
-import SettingsInputs from '../../components/CustomTextField/SettingsInputs';
 import { goToRoute } from "../../lib/navigationHelpers";
 import { logout } from "../../redux/modules/authentication";
 import store from '../../redux/store';
+import CustomButton from '../../components/Buttons/CustomButton';
+import SmallCustomButton from '../../components/Buttons/SmallCustomButton';
+import NavigationBar from "../../components/NavigationBar";
+import SettingsTextField from '../../components/CustomTextField/SettingsTextField';
+import SettingsInputs from '../../components/CustomTextField/SettingsInputs';
 
 class Setting extends Component {
 
@@ -127,73 +130,103 @@ class Setting extends Component {
           <Text style={styles.sectionTitle}>User Information</Text>
   
           <View>
-            <View style={styles.optionContainer}>
-              {!this.state.showFullname 
-                ? <Text style={styles.optionText}>{fullname}</Text>
-                : <SettingsInputs 
-                    placeholder="your new name" 
+            { !this.state.showFullname ? 
+              (
+                <View style={styles.optionContainer}>
+                  <Text style={styles.optionText}>{fullname}</Text>
+                  <TouchableOpacity activeOpacity={0.5} onPress={this._handleFullnameChange} >
+                    <SmallCustomButton btnText="Change" />
+                  </TouchableOpacity>
+                </View>
+              ) : (
+                <View style={styles.changeOptionContainer}>
+                  <SettingsTextField
+                    label="fullName" 
+                    placeholder="Enter your new name" 
                     value={this.state.newName}
-                    onChangeText={newName => this.setState({ newName })} /> }
-              {!this.state.showFullname 
-                ? null
-                : <TouchableOpacity activeOpacity={0.5} onPress={this._handleNameSubmit} >
-                    <SmallCustomButton btnText="Save" />
-                  </TouchableOpacity>}
-              <TouchableOpacity activeOpacity={0.5} onPress={this._handleFullnameChange} >
-                <SmallCustomButton btnText={!this.state.showFullname ? "Change" : "Cancel"} />
-              </TouchableOpacity>
-            </View>
+                    onChangeText={newName => this.setState({ newName })} 
+                  />
+                  <View style={styles.changeOptionButtonsWrapper}>
+                    <TouchableOpacity activeOpacity={0.5} onPress={this._handleNameSubmit} >
+                      <SmallCustomButton btnText="Save" />
+                    </TouchableOpacity>
+                    <TouchableOpacity activeOpacity={0.5} onPress={this._handleFullnameChange} >
+                      <SmallCustomButton btnText="Cancel" />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )
+            }
 
-            <View style={styles.optionContainer}>
-              {!this.state.showEmail
-              ? <Text style={styles.optionText}>{email}</Text>
-              : <View>
-                  <SettingsInputs 
-                      placeholder="your current email"
-                      value={this.state.email}
-                      onChangeText={email => this.setState({ email })} /> 
+            { !this.state.showEmail ? 
+              (
+                <View style={styles.optionContainer}>
+                  <Text style={styles.optionText}>{email}</Text>
+                  <TouchableOpacity activeOpacity={0.5} onPress={this._handleEmailChange} >
+                    <SmallCustomButton btnText="Change" />
+                  </TouchableOpacity>
+                 </View>
+              ) : (
+                <View style={styles.changeOptionContainer}>
+                  <SettingsTextField
+                    label="currentEmail" 
+                    placeholder="Enter your current email" 
+                    value={this.state.email}
+                    onChangeText={email => this.setState({ email })}
+                  />
+                  <SettingsTextField 
+                    label="password" 
+                    placeholder="Enter your password"
+                    value={this.state.password}
+                    onChangeText={password => this.setState({ password })} 
+                  /> 
+                  <SettingsTextField 
+                    label="newEmail" 
+                    placeholder="Enter your new email"
+                    value={this.state.newEmail}
+                    onChangeText={newEmail => this.setState({ newEmail })}
+                  />
+                  <View style={styles.changeOptionButtonsWrapper}>
+                    <TouchableOpacity activeOpacity={0.5} onPress={this._handleEmailSubmit} >
+                      <SmallCustomButton btnText="Save" />
+                    </TouchableOpacity>
+                    <TouchableOpacity activeOpacity={0.5} onPress={this._handleEmailChange} >
+                      <SmallCustomButton btnText="Cancel" />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )
+            }
 
-                  <SettingsInputs 
-                      placeholder="your password"
-                      value={this.state.password}
-                      onChangeText={password => this.setState({ password })} /> 
-
-                  <SettingsInputs 
-                      placeholder="your new email"
-                      value={this.state.newEmail}
-                      onChangeText={newEmail => this.setState({ newEmail })}/> 
-
-                </View>}
-                {!this.state.showEmail 
-                ? null
-                : <TouchableOpacity activeOpacity={0.5} onPress={this._handleEmailSubmit} >
-                    <SmallCustomButton btnText="Save" />
-                </TouchableOpacity> }
-               <TouchableOpacity activeOpacity={0.5} onPress={this._handleEmailChange} >
-                    <SmallCustomButton btnText={!this.state.showEmail ? "Change" : "Cancel"} />
-                </TouchableOpacity>
-            </View>
-
-            <View style={styles.optionContainer}>
-              {!this.state.showPassword
-              ? <Text style={styles.optionText}>Password</Text>
-              : <Text style={styles.optionText}>Would you like to change your password?</Text> }
-              {!this.state.showPassword 
-                ? null
-                : <TouchableOpacity activeOpacity={0.5} onPress={this._handlePasswordSubmit} >
-                    <SmallCustomButton btnText="Yes" />
-                  </TouchableOpacity>}
-              <TouchableOpacity activeOpacity={0.5} onPress={this._handlePasswordChange} >
-                <SmallCustomButton btnText={!this.state.showPassword ? "Change" : "Cancel"} />
-              </TouchableOpacity>
-            </View>
+            { !this.state.showPassword ? 
+              (
+                <View style={styles.optionContainer}>
+                  <Text style={styles.optionText}>Password</Text>
+                  <TouchableOpacity activeOpacity={0.5} onPress={this._handlePasswordChange} >
+                    <SmallCustomButton btnText="Change" />
+                  </TouchableOpacity>
+                 </View>
+              ) : (
+                <View style={styles.changeOptionContainer}>
+                  <Text style={styles.optionText}>Would you like to change your password?</Text>
+                  <View style={[styles.changeOptionButtonsWrapper, styles.signOutButtons]}>
+                    <TouchableOpacity activeOpacity={0.5} onPress={this._handlePasswordSubmit} >
+                      <SmallCustomButton btnText="Yes" />
+                    </TouchableOpacity>
+                    <TouchableOpacity activeOpacity={0.5} onPress={this._handlePasswordChange} >
+                      <SmallCustomButton btnText="Cancel" />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )
+            }
           </View>
   
         </View>
 
-        <View style={[styles.settingSection, styles.notificationSection]}>
+        <View style={[styles.signOutSection, styles.notificationSection]}>
           <TouchableOpacity activeOpacity={0.5} onPress={this.signOut} >
-              <SmallCustomButton btnText="Sign Out"/>
+              <CustomButton btnText="Sign Out"/>
           </TouchableOpacity>
         </View>
 

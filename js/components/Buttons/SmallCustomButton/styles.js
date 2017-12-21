@@ -5,6 +5,7 @@ import { colors, typography, textSizes, margins } from '../../../config/styles';
 const styles = StyleSheet.create({
   buttonWrapper: {
     alignItems: 'center',
+    marginLeft: margins.marginL,
   },
   button: {
     flex: 0,
