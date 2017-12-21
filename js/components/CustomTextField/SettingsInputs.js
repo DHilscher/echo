@@ -10,7 +10,7 @@ const TitledInput = ({ label, value, onChangeText, placeholder, secureTextEntry 
             <View style={styles.settingsContainerStyle}>
                 <TextInput
                     placeholder={placeholder}
-                    placeholderTextColor={colors.mainGreen}
+                    placeholderTextColor="white"
                     selectionColor={colors.yellow}
                     autoCapitalize="none"
                     autoCorrect={false}
@@ -22,4 +22,4 @@ const TitledInput = ({ label, value, onChangeText, placeholder, secureTextEntry 
         );
 };
 
-export default TitledInput
+export default TitledInput;

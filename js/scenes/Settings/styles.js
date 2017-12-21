@@ -32,5 +32,22 @@ export default StyleSheet.create({
     color: "white",
     fontSize: textSizes.bodyL,
     fontFamily: typography.fontHeavy
-  }
+  },
+
+  changeOptionContainer: {
+    flex: 1,
+    flexDirection: "column",
+    marginVertical: margins.marginL,
+  },
+  changeOptionButtonsWrapper: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginVertical: margins.marginS
+  },
+  signOutSection: {
+    padding: margins.marginL + margins.marginL,
+  },
+  signOutButtons: {
+    marginTop: margins.marginL,
+  },
 });
