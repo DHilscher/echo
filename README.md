@@ -1,27 +1,20 @@
 # Echo-fall-2017
 Repository for the Echo Community Project.
 
-# Screenshot
-image
-
 # Languages
-react native
-french
-english
-german
-cantoneese
+React Native
+Javascript
+Realm
+React
+Redux
 
-# MORE TESTS
-MORE OF THE PROJECT TO COME
+# Screenshot
+<img width="399" alt="echo home" src="https://user-images.githubusercontent.com/29613498/34266884-a76d51a4-e62f-11e7-9456-6c0ba44de4a6.png">
 
-## Members
+# Members
 - Cora Wong
-- David Hilscher (The handsome one)
+- David Hilscher
 - Mark Flores
 - Shaahid Khalpey
-
-# Technology
-- React-Native
-- Git
 
 © November 30, 2017
